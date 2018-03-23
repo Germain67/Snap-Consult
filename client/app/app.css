@@ -1,0 +1,5 @@
+@import "./secondComponent/secondComponent.css";
+
+html, body {
+    height:100%;
+}
