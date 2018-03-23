@@ -3,9 +3,12 @@ Snap-Consult est une application de salle d'attente virtuelle qui va vous permet
 
 # Installation et démarrage du client
 > cd client
+
 > npm install
+
 > npm start
 
+  
 # Installation Server
 > Dépendances à installer : git, node/npm et mongodb
 
