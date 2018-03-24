@@ -19,9 +19,7 @@ Snap-Consult est une application de salle d'attente virtuelle qui va vous permet
 
 > ```npm run seed```
 
-## Lancer la BDD et le serveur
-
-> ```sudo service mongod start```
+## Lancer le serveur
 
 > ```npm start```
 
