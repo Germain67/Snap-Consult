@@ -1,9 +1,9 @@
-angular.module("homeComponent").component("patientListComponent", {
+angular.module("homeComponent").component("patientInfoComponent", {
 
     bindings: {
     },
 
-    template: require("./patientListComponent.html"),
+    template: require("./patientInfoComponent.html"),
 
     controller: [
         "$log",
@@ -16,8 +16,12 @@ angular.module("homeComponent").component("patientListComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                
-            }
+                console.log("iint");
+            };
+
+            ctrl.onContinue = function() {
+                console.error("coucouc");
+            };
         }
     ]
 });

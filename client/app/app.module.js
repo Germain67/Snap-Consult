@@ -3,10 +3,8 @@ import uirouter from '@uirouter/angularjs'
 import routes from './app.routes'
 import homeComponent from './homeComponent'
 import mainPageComponent from './mainPageComponent/mainPageComponent'
-import patientListComponent from './patientListComponent/patientListComponent' 
+import patientInfoComponent from './patientInfoComponent/patientInfoComponent' 
 import doctorProfileComponent from './userProfile/doctorProfileComponent/doctorProfileComponent' 
-
-// import styles from './app.css'
 
 
 angular.module('snapConsult', [uirouter, 'pascalprecht.translate', homeComponent])
