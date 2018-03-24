@@ -26,3 +26,10 @@
     top: 20px;
     color: white;
 }
+
+.headerComponent_counter {
+    position: absolute;
+    right: calc(50% - 22px);
+    color: white;
+    font-size: 37px;
+}
