@@ -6,7 +6,7 @@ angular.module("homeComponent").component("symptomesComponent", {
     template: require("./symptomesComponent.html"),
 
     controller: [
-        "$log",,
+        "$log",
         "$state",
 
         function($log, $state) {
