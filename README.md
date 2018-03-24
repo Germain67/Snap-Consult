@@ -8,13 +8,19 @@ Snap-Consult est une application de salle d'attente virtuelle qui va vous permet
 
 > npm start
 
-  
+
 # Installation Server
 > Dépendances à installer : git, node/npm et mongodb
 
 > Faire un ```npm install```
 
 # Lancer mongoDb et le serveur
+## Enregistre des données de bases dans nedb
+
+> ```npm run seed```
+
+## Lancer la BDD et le serveur
+
 > ```sudo service mongod start```
 
 > ```npm start```

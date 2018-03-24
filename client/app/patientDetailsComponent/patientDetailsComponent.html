@@ -1,15 +1,22 @@
 <div class="patientDetailsComponent">
     <div class="patientDetailsHeader">
-        <img class="patientDetailsHeader_avatar" ng-src="/resources/images/{{$ctrl.patient.avatar}}"/>
-        <div class="patientDetailsHeader_name">{{$ctrl.patient.displayName}}</div>
-        <div class="patientDetailsHeader_age">{{$ctrl.patient.age}} ans</div>
+        <img ng-if="$ctrl.patient.avatar" class="patientDetailsHeader_avatar" ng-src="/resources/images/{{$ctrl.patient.avatar}}.jpg"/>
+        <div ng-if="!$ctrl.patient.avatar" class="patientDetailsHeader_number">{{$ctrl.patient.displayName}}</div>
+        <div ng-if="!$ctrl.patient.lastname" class="patientListItemComponent_name">
+            Patient en salle d'attente
+        </div>
+        <div ng-if="$ctrl.patient.lastname" class="patientDetailsHeader_name">{{$ctrl.patient.displayName}}</div>
+        <div ng-if="$ctrl.patient.lastname" class="patientDetailsHeader_age">{{$ctrl.patient.age}} ans</div>
+        <div class="patientDetailsHeader_close" ng-click="$ctrl.close()">Terminer</div>
     </div>
     <div class="patientDetailsMain">
+        <!--img class="patientDetailsIcon" src="/resources/images/reason.svg"/-->
         <span class="patientDetailsTitle">Motif de consultation</span>
-        <span class="patientDetailsInfo">{{$ctrl.patient.motif}}</span>
+        <span class="patientDetailsInfo">{{$ctrl.patient.motive}}</span>
+        <!--img class="patientDetailsIcon" src="/resources/images/symptom.svg"/-->
         <span class="patientDetailsTitle">Autres symptomes</span>
-        <span class="" ng-repeat="symptome in $ctrl.patient.symptomes">
-            {{symptome}}
+        <span ng-repeat="symptom in $ctrl.patient.symptoms">
+            {{symptom}}
         </span>
     </div>
 </div>
