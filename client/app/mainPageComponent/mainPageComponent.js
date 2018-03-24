@@ -1,4 +1,4 @@
-import patientService from '../services/patientService' 
+import patientService from '../services/patientService'
 
 angular.module("homeComponent").component("mainPageComponent", {
 
@@ -10,9 +10,10 @@ angular.module("homeComponent").component("mainPageComponent", {
     controller: [
 
         "$log",
+        "$interval",
         "patientService",
 
-        function($log, patientService) {
+        function($log, $interval, patientService) {
             "use strict";
             var ctrl = this;
 
@@ -20,11 +21,18 @@ angular.module("homeComponent").component("mainPageComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                ctrl.currentPatient = "";
                 ctrl.patients = [];
+                ctrl.getPatients();
+                ctrl.currentPatient = ctrl.patients[0];
+                $interval(function() { ctrl.getPatients(); }, 5000);
+            }
+
+            ctrl.getPatients = function(){
                 patientService.getPatients().then(function(patients) {
                     ctrl.patients = patients;
                 });
+                this.listTabs = ["File d'attente", "Statistiques"];
+                this.currentTab = this.listTabs[0];
             }
 
             ctrl.onPatientClick = function(patient) {
