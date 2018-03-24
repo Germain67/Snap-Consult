@@ -2,30 +2,45 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const fs = require('fs');
+const cors = require('cors');
 
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost/snap_consult');
+// Allow CORS requests
+app.use(cors());
+
+var Datastore = require('nedb');
+var db = new Datastore({filename: './database/data.json', autoload: true });
+
+db.loadDatabase(function (err) {
+  if(err) {
+    console.error(err);
+  }
+});
+
+
+/*mongoose.connect('mongodb://localhost/snap_consult');
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => { console.log('db successfully connected'); });
 
 const userSchema = mongoose.Schema({
-  login: String,
-  password: String,
   email: String,
   firstname: String,
   lastname: String,
   phonenumber: String,
   displayName: String,
-  age: Number
-  // avatar: String
+  age: Number,
+  motive: String,
+  symptoms: [String],
+  avatar: String,
+  firstConsult: Boolean
 });
-const User = mongoose.model('users', userSchema);
+const User = mongoose.model('users', userSchema);*/
 
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', (req, res) => {
@@ -38,39 +53,41 @@ const fixName = (name) => {
 };
 
 app.post('/adduser', (req, res) => {
-  var login = req.body.login;
-  var password = req.body.password;
   var email = req.body.email;
   var firstname = fixName(req.body.firstname);
   var lastname = fixName(req.body.lastname);
   var displayName = firstname + " " + lastname;
   var age = req.body.age;
   var phonenumber = req.body.phonenumber;
+  var motive = req.body.motive;
+  var symptoms = req.body.symptoms;
+  var avatar = req.body.avatar;
+  var firstConsult = req.body.firstConsult;
 
-  const myuser = new User({
-    login : login,
-    password : password,
+  const myuser = {
     email : email,
     firstname : firstname,
     lastname : lastname,
     displayName: displayName,
     age: age,
-    phonenumber : phonenumber
-  });
-
-  myuser.save((err, resp) => {
+    phonenumber : phonenumber,
+    motive: motive,
+    symptoms: symptoms,
+    avatar: avatar,
+    firstConsult: firstConsult
+  };
+  db.insert(myuser, (err, resp) => {
     if (err) {
       console.error(err);
       res.status(500).send(err);
     } else {
-      console.log(resp.firstname);
       res.status(200).send(resp);
     }
   });
 });
 
 app.get('/users', (req, res) => {
-  User.find((err, users) => {
+  db.find({}, (err, users) => {
     if (err) {
       console.error(err);
       res.status(500).send(err);

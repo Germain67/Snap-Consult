@@ -12,45 +12,63 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded"
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
-							"key": "login",
-							"value": "test",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "test",
-							"type": "text"
-						},
-						{
 							"key": "email",
 							"value": "test@test.test",
-							"type": "text"
+							"type": "text",
+							"description": ""
 						},
 						{
 							"key": "firstname",
 							"value": "test",
-							"type": "text"
+							"type": "text",
+							"description": ""
 						},
 						{
 							"key": "lastname",
 							"value": "test",
-							"type": "text"
+							"type": "text",
+							"description": ""
 						},
 						{
 							"key": "phonenumber",
 							"value": "+33652038596",
-							"type": "text"
+							"type": "text",
+							"description": ""
 						},
 						{
-							"key": "age\n",
+							"key": "age",
 							"value": "29",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "motive",
+							"value": "diahrée explosive",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "symptoms",
+							"value": "mal de ventre",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "symptoms",
+							"value": "diahrée",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "avatar",
+							"value": "dwayne5",
 							"description": "",
 							"type": "text"
 						}

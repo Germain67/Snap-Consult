@@ -8,8 +8,9 @@ angular.module("homeComponent").component("doctorProfileComponent", {
     controller: [
         "$log",
         "$translate",
+        "$state",
 
-        function($log, $translate) {
+        function($log, $translate, $state) {
             "use strict";
             var ctrl = this;
 
@@ -33,6 +34,10 @@ angular.module("homeComponent").component("doctorProfileComponent", {
             ctrl.computeWaitTime = function() {
                 ctrl.waitingTime = {time: "10"};
                 
+            };
+
+            ctrl.onContinue = function() {
+                $state.go("patientInfoComponent");
             };
         }
     ]

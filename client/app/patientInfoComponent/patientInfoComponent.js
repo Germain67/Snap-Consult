@@ -7,8 +7,10 @@ angular.module("homeComponent").component("patientInfoComponent", {
 
     controller: [
         "$log",
+        "$state",
+        "$http",
 
-        function($log) {
+        function($log, $state, $http) {
             "use strict";
             var ctrl = this;
 
@@ -16,11 +18,11 @@ angular.module("homeComponent").component("patientInfoComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                console.log("iint");
             };
 
             ctrl.onContinue = function() {
-                console.error("coucouc");
+                // $http({ method: "POST", url: "/adduser", data: {} });
+                $state.go("reservePlace");
             };
         }
     ]

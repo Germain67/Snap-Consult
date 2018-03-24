@@ -13,5 +13,9 @@ export default function routes($stateProvider) {
         .state('doctorProfileComponent', {
             url: '/doctor',
             component: "doctorProfileComponent",
+        })
+        .state('reservePlace', {
+            url: '/reserveplace',
+            component: "patientReservePlaceComponent",
         });
 }
