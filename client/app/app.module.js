@@ -4,7 +4,7 @@ import routes from './app.routes'
 import homeComponent from './homeComponent'
 import mainPageComponent from './mainPageComponent/mainPageComponent'
 import patientInfoComponent from './patientInfoComponent/patientInfoComponent' 
-import doctorProfileComponent from './userProfile/doctorProfileComponent' 
+import doctorProfileComponent from './userProfile/doctorProfileComponent/doctorProfileComponent' 
 
 // import styles from './app.css'
 
