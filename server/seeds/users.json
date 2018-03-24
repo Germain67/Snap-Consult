@@ -1,18 +1,22 @@
 {
-  "login": "germain67",
-  "password": "dwayne",
   "email": "germain.clauss@gmail.com",
   "firstname": "Germain",
   "lastname": "Clauss",
   "displayName": "Germain Clauss",
-  "phonenumber": "+33622441559"
+  "phonenumber": "+33622441559",
+  "age": 22,
+  "motive": "Diahrée explosive",
+  "symptoms": ["mal au bide", "déshydraté"],
+  "avatar": "dwayne1"
 }
 {
-  "login": "momo",
-  "password": "dwayne",
   "email": "mohamed.azzouz@gmail.com",
   "firstname": "Mohamed",
   "lastname": "Azzouz",
   "displayName": "Mohamed Azzouz",
-  "phonenumber": "+213552037421"
+  "phonenumber": "+213552037421",
+  "age": 23,
+  "motive": "Gastro",
+  "symptoms": ["chiasse", "inflammations"],
+    "avatar": "dwayne2"
 }

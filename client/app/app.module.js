@@ -9,6 +9,7 @@ import patientListComponent from './patientListComponent/patientListComponent'
 import patientListItemComponent from './patientListComponent/patientListItemComponent/patientListItemComponent' 
 import doctorProfileComponent from './userProfile/doctorProfileComponent/doctorProfileComponent' 
 import patientDetailsComponent from './patientDetailsComponent/patientDetailsComponent' 
+import patientReservePlaceComponent from './patientReservePlace/patientReservePlaceComponent' 
 
 
 angular.module('snapConsult', [uirouter, 'pascalprecht.translate', homeComponent])
