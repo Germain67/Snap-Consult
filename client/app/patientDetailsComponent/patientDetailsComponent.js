@@ -1,7 +1,8 @@
 angular.module("homeComponent").component("patientDetailsComponent", {
 
     bindings: {
-        patient: "<"
+        patient: "<",
+        onClose: "&"
     },
 
     template: require("./patientDetailsComponent.html"),
@@ -18,6 +19,10 @@ angular.module("homeComponent").component("patientDetailsComponent", {
             /***********************************************************/
             ctrl.$onInit = function() {
                 
+            }
+
+            ctrl.close = function() {
+                ctrl.onClose();
             }
         }
     ]

@@ -6,7 +6,7 @@
             <patient-list-component on-patient-click="$ctrl.onPatientClick($patient)" patients="$ctrl.patients"></patient-list-component>
         </div>
         <div class="mainPageComponent_right">
-            <patient-details-component patient="$ctrl.currentPatient"></patient-details-component>
+            <patient-details-component patient="$ctrl.currentPatient" on-close="$ctrl.close()"></patient-details-component>
         </div>
     </div>
 </div>

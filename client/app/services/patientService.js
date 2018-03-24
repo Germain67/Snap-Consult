@@ -23,5 +23,20 @@ angular.module("homeComponent").service("patientService", [
                     });
             })
         }
+
+        service.removePatient = function (patient) {
+            return $q(function (resolve, reject) {
+                $http({
+                    method: "DELETE",
+                    url: "http://localhost:8080/users/" + patient._id,
+                })
+                    .then(function success(response) {
+                        resolve();
+                    })
+                    .catch(function failure(response) {
+                        reject();
+                    });
+            })
+        }
     }
 ]);
