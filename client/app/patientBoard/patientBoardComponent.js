@@ -24,7 +24,7 @@ angular.module("homeComponent").component("patientBoardComponent", {
 
                     ctrl.getPatients();
 
-                    // $interval(function() { ctrl.getPatients(); }, 5000);
+                    $interval(function() { ctrl.getPatients(); }, 5000);
                     
                 };
 
@@ -32,15 +32,15 @@ angular.module("homeComponent").component("patientBoardComponent", {
                     return $q(function (resolve, reject) {
                         patientService.getPatients()
                             .then(function (patients) {
-                                ctrl.nb = patients.length;
-                                var time = patients.length*15;
+                                ctrl.nb = patients.length - 1;
+                                var time = (patients.length - 1)*15;
 
                                 var min = time%60;
 
                                 if (!min) {
                                     min = "00";
                                 }
-                                
+
                                 var hours = Math.floor(time/60);
 
                                 ctrl.time = hours + "h" + min;
