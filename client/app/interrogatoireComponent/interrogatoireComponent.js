@@ -11,14 +11,16 @@ angular.module("homeComponent").component("interrogatoireComponent", {
         function($log) {
             "use strict";
             var ctrl = this;
-            var activity;
-            var medicaments;
+            ctrl.page = "page1";
+            ctrl.activity;
+            ctrl.medicaments;
 
             /***********************************************************/
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
                 console.log("interro");
+                console.log(page);
             };
 
             ctrl.onContinue = function() {

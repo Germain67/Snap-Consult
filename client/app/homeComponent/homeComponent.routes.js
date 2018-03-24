@@ -18,6 +18,10 @@ export default function routes($stateProvider) {
             url: '/symptomes',
             component: "symptomesComponent",
         })
+        .state('interrogatoire', {
+            url: '/interrogatoire',
+            component: "interrogatoireComponent",
+        })
         .state('reservePlace', {
             url: '/reserveplace',
             component: "patientReservePlaceComponent",

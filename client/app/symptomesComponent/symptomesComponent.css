@@ -21,6 +21,6 @@ div.symptomesComponent .patient-info-card {
    box-shadow: 0 0 1em #ccc;
 }
 
-.button-primary {
+div.symptomesComponent .button-primary {
   padding: 0 20px;
 }
