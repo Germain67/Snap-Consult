@@ -13,8 +13,8 @@ angular.module("homeComponent").component("interrogatoireComponent", {
             "use strict";
             var ctrl = this;
             ctrl.page = "page1";
-            ctrl.activity;
-            ctrl.medicaments;
+            ctrl.activity = "yes";
+            ctrl.medicaments = "no";
 
             /***********************************************************/
             /** INITIALISATION STUFF                                  **/

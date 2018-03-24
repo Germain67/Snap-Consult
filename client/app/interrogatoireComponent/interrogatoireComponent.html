@@ -4,13 +4,13 @@
 
   <div class="patient-info-card">
     <div ng-if="$ctrl.page === 'page1'">
-      <p for="fname">Etes vous en activité ?</p>
+      <p for="fname">Travaillez-vous actuellement ?</p>
       <label><input type="radio" ng-model="$ctrl.activity" value="yes">Oui</label>
       <label><input type="radio" ng-model="$ctrl.activity" value="no">Non</label>
 
       <div ng-if="$ctrl.activity === 'yes'">
         <p for="fname">Quelle est votre profession ?</p>
-        <input class="u-full-width inputField" type="text" id="fname" name="firstname" placeholder="Profession">
+        <input class="u-full-width inputField" type="text" id="fname" name="firstname" placeholder="Profession" value="Coach">
       </div>
 
       <p for="fname">Avez vous une couverture maladie complémentaire ?</p>
@@ -23,17 +23,17 @@
     </div>
     <div ng-if="$ctrl.page === 'page2'">
       <p for="fname">Avez-vous des antécédents médicaux  ?</p>
-      <input class="u-full-width inputField" type="text" id="fname" name="firstname" placeholder="Tension / diabète / autre (précisez)">
+      <input class="u-full-width inputField" type="text" id="fname" name="firstname" placeholder="Tension / diabète / autre (précisez)" value="Diabète">
       <p for="fname">Avez-vous des antécédents chirurgicaux ?</p>
-      <input class="u-full-width inputField" type="text" id="fname" name="firstname" placeholder="Appendicectomie / autre">
+      <input class="u-full-width inputField" type="text" id="fname" name="firstname" placeholder="Appendicectomie / autre" value="Non">
       <p for="fname">Avez-vous des antécédents gynécologiques ?</p>
-      <input class="u-full-width inputField" type="text" id="fname" name="firstname" placeholder="Grossesse / autre">
+      <input class="u-full-width inputField" type="text" id="fname" name="firstname" placeholder="Grossesse / autre" value="Non">
       <p for="fname">Prenez-vous des médicaments tous les jours ?</p>
       <label><input type="radio" ng-model="$ctrl.medicaments" value="yes">Oui</label>
       <label><input type="radio" ng-model="$ctrl.medicaments" value="no">Non</label>
       <div class="u-full-width" style="text-align:center; margin-top: 20px;">
         <button class="button-primary" ng-click="$ctrl.page = 'page1'">Précédent</button>
-        <button class="button-primary" ng-click="$ctrl.page = 'page3'">Continuer</button>
+        <button class="button-primary" ng-click="$ctrl.onContinue()">Continuer</button>
       </div>
     </div>
   </div>
