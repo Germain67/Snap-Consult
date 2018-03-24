@@ -48,7 +48,8 @@
 .bodyContent {    
     position: absolute;
     top: 40rem;
-    left: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
     width: 34rem;
     background: white;
     border-radius: 2%;
@@ -58,7 +59,8 @@
 .bodyContent1 {    
     position: absolute;
     top: 26rem;
-    left: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
     width: 34rem;
     background: white;
     border-radius: 2%;

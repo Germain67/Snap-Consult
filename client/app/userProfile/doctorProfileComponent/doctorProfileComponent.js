@@ -23,7 +23,7 @@ angular.module("homeComponent").component("doctorProfileComponent", {
             }
 
             ctrl.initDoctorDetails = function() {
-                ctrl.avatar =  "../../resources/images/chinho.jpg";
+                ctrl.avatar =  "../../resources/images/Pierre-Morvan.jpg";
                 ctrl.displayName = "Dr. Duhâne Fils-de-Jean";
                 ctrl.address = "6 rue du Rock";
                 ctrl.city = "67000 Strasbourg";
