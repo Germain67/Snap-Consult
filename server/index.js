@@ -27,8 +27,8 @@ const userSchema = mongoose.Schema({
   age: Number,
   motive: String,
   symptoms: [String],
-  avatar: String
-  // avatar: String
+  avatar: String,
+  firstConsult: Boolean
 });
 const User = mongoose.model('users', userSchema);
 
@@ -52,6 +52,7 @@ app.post('/adduser', (req, res) => {
   var motive = req.body.motive;
   var symptoms = req.body.symptoms;
   var avatar = req.body.avatar;
+  var firstConsult = req.body.firstConsult;
 
   const myuser = new User({
     email : email,
@@ -62,7 +63,8 @@ app.post('/adduser', (req, res) => {
     phonenumber : phonenumber,
     motive: motive,
     symptoms: symptoms,
-    avatar: avatar
+    avatar: avatar,
+    firstConsult: firstConsult
   });
 
   myuser.save((err, resp) => {
