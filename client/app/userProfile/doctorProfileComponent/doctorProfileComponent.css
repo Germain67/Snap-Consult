@@ -1,6 +1,7 @@
 .doctorProfileClass {
     display: flex;
     flex-flow: column nowrap;
+    font-family: lato;
 }
 
 .headerSection {
@@ -10,43 +11,110 @@
     align-items: center;
     padding-top: 5rem;
     padding-bottom: 3rem;
+    background: radial-gradient(#88c5e8, #2585f4);
 }
 
 .halfCut::before {
     content: '';
     position: absolute;
     width: 100%;
-    height: 50%;
+    height: 110%;
     top: -6px;
     left: 0;
     background-color: #58a4bf;
     z-index: -1;
 }
 .avatar {
-    width: 20rem;
-    height: 20rem;
+    width: 14rem;
+    height: 14rem;
     border-radius: 50%;
-    border: 0.75rem solid #fafafa;
     z-index: 1;
 }
 
 .doctorInfo {
     padding: 0.75rem 0;
-    font-size: 3rem;
+    font-size: 2rem;
+    color: white;
 }
 
 .timeContainer {
-    font-size: 3rem;
+    padding-top: 1rem;
+    font-size: 2rem;
     text-align: center;
+    display: flex;
+    flex-flow: column;
 }
 
-.bodyContent {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+.bodyContent {    
+    position: absolute;
+    top: 40rem;
+    left: 2rem;
+    width: 34rem;
+    background: white;
+    border-radius: 2%;
+    height: 24rem;
+    box-shadow: 0 2px 2px hsla(0,0%,50%,.22);
+}
+.bodyContent1 {    
+    position: absolute;
+    top: 26rem;
+    left: 2rem;
+    width: 34rem;
+    background: white;
+    border-radius: 2%;
+    box-shadow: 0 2px 2px hsla(0,0%,50%,.22);
 }
 
 .infoContainer {
-    width: 70%;
-    height: 80%;
+    display: flex;
+    flex-flow: column nowrap;    
+}
+
+.usualBackground {
+    background: #fafafa;
+}
+
+.profileInfoContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.infoList {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.addressClass {
+    display: flex;
+    flex-flow: row;
+    line-height: 2rem;
+}
+.numberClass {
+    display: flex;
+    flex-flow: row;
+}
+.affluenceClass {
+    display: flex;
+    flex-flow: row;
+}
+
+.smallIcon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+    align-self: center;
+    margin-bottom: .5rem;
+}
+
+.bigIcon {
+    width: 6rem;
+    height: 6rem;
+    align-self: center;
+    color: red;
+    fill: yellow;
 }

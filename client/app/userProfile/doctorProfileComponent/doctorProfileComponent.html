@@ -7,17 +7,32 @@
             <span class="mainText">{{$ctrl.displayName}}</span>
         </div>
     </header>
-    <article class="bodyContent">
-        <div class="infoContainer">
-            <div class="timeContainer">
-                <span translate="estimatedWaitingTime"
-                translate-values='$ctrl.waitingTime'/>
+    <article class="usualBackground">
+        <aside class="bodyContent1">
+            <div class="profileInfoContainer">
+                <div class="addressClass">
+                    <img class="smallIcon" ng-src="/resources/images/svg/lieu.svg"/>
+                    <label>{{ $ctrl.address }}<br>{{ $ctrl.city }}</label>
+                </div>
+                <div class="numberClass">
+                    <img class="smallIcon" ng-src="/resources/images/svg/icon_mobile-pro.svg"/>
+                    <label>{{ $ctrl.phoneNumber }}</label>
+                </div>
+                <div class="affluenceClass">
+                    <img class="smallIcon" ng-src="/resources/images/svg/icon_team.svg"/>
+                    <label>{{ $ctrl.affluenceText }}</label>
+                </div>
             </div>
-            <div class="profileInfoContainer">                
+        </aside>
+        <aside class="bodyContent">
+            <div class="infoContainer">
+                <img class="bigIcon"ng-src="/resources/images/svg/clock.svg"/>
+                <div class="timeContainer">
+                    <span translate="estimatedWaitingTime"></span>
+                    <span>1h30</span>
+                </div>
             </div>
-        </div>
+            <div class="buttonContainer"></div>
+        </aside>
     </article>
-    <footer>
-        <div class="buttonContainer"></div>
-    </footer>
 </div>

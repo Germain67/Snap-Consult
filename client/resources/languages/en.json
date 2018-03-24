@@ -1,4 +1,6 @@
 {
     "next": "Next",
-    "estimatedWaitingTime": "Estimated waiting time</br>{{time}} minutes"
+    "estimatedWaitingTime": "Estimated waiting time",
+    "busyPeriod": "Busy period",
+    "quietPeriod": "Quiet period"
 }
