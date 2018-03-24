@@ -8,6 +8,6 @@ export default function routes($stateProvider) {
         })
         .state('patientInfoComponent', {
             url: '/patient',
-            template: require('../patientInfoComponent/patientInfoComponent.html')
+            component: "patientInfoComponent",
         });
 }
