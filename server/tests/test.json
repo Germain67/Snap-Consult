@@ -1,22 +1,18 @@
 {
-	"variables": [],
 	"info": {
+		"_postman_id": "eddeddb5-c8d4-4a55-8091-813d148f2a32",
 		"name": "Users",
-		"_postman_id": "807200c7-9295-ca3b-3aab-894977e14793",
-		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "Add User",
 			"request": {
-				"url": "http://localhost:8080/adduser",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"description": ""
+						"value": "application/x-www-form-urlencoded"
 					}
 				],
 				"body": {
@@ -25,42 +21,74 @@
 						{
 							"key": "login",
 							"value": "test",
-							"type": "text",
-							"description": ""
+							"type": "text"
 						},
 						{
 							"key": "password",
 							"value": "test",
-							"type": "text",
-							"description": ""
+							"type": "text"
 						},
 						{
 							"key": "email",
 							"value": "test@test.test",
-							"type": "text",
-							"description": ""
+							"type": "text"
 						},
 						{
 							"key": "firstname",
 							"value": "test",
-							"type": "text",
-							"description": ""
+							"type": "text"
 						},
 						{
 							"key": "lastname",
 							"value": "test",
-							"type": "text",
-							"description": ""
+							"type": "text"
 						},
 						{
 							"key": "phonenumber",
 							"value": "+33652038596",
-							"type": "text",
-							"description": ""
+							"type": "text"
+						},
+						{
+							"key": "age\n",
+							"value": "29",
+							"description": "",
+							"type": "text"
 						}
 					]
 				},
+				"url": {
+					"raw": "http://localhost:8080/adduser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"adduser"
+					]
+				},
 				"description": "Add user to the database"
+			},
+			"response": []
+		},
+		{
+			"name": "List users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				},
+				"description": "List all users in db"
 			},
 			"response": []
 		}
