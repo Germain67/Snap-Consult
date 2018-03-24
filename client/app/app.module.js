@@ -6,7 +6,7 @@ import mainPageComponent from './mainPageComponent/mainPageComponent'
 import patientListComponent from './patientListComponent/patientListComponent' 
 import doctorProfileComponent from './userProfile/doctorProfileComponent' 
 
-import styles from './app.css'
+// import styles from './app.css'
 
 
 angular.module('snapConsult', [uirouter, 'pascalprecht.translate', homeComponent])
