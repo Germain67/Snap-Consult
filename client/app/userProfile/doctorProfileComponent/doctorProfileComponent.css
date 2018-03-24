@@ -40,7 +40,7 @@
 
 .timeContainer {
     padding-top: 1rem;
-    font-size: 3rem;
+    font-size: 2.3rem;
     text-align: center;
     display: flex;
     flex-flow: column;
@@ -70,7 +70,8 @@
 
 .infoContainer {
     display: flex;
-    flex-flow: column nowrap;    
+    flex-flow: column nowrap;
+    margin-top: 2rem;
 }
 
 .usualBackground {
