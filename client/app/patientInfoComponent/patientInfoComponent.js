@@ -1,9 +1,9 @@
-angular.module("homeComponent").component("patientListComponent", {
+angular.module("homeComponent").component("patientInfoComponent", {
 
     bindings: {
     },
 
-    template: require("./patientListComponent.html"),
+    template: require("./patientInfoComponent.html"),
 
     controller: [
         "$log",
