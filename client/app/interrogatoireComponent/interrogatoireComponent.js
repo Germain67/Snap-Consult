@@ -7,8 +7,9 @@ angular.module("homeComponent").component("interrogatoireComponent", {
 
     controller: [
         "$log",
+        "$state",
 
-        function($log) {
+        function($log, $state) {
             "use strict";
             var ctrl = this;
             ctrl.page = "page1";
@@ -23,8 +24,12 @@ angular.module("homeComponent").component("interrogatoireComponent", {
                 console.log(page);
             };
 
+            ctrl.onBack = function() {
+                $state.go("symptomes");
+            };
+
             ctrl.onContinue = function() {
-                console.error("test");
+                $state.go("finish");
             };
         }
     ]
