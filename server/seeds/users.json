@@ -1,12 +1,12 @@
 {
-  "email": "ewen.dupont@gmail.com",
+  "email": "ewen.papapresse@gmail.com",
   "firstname": "Ewen",
-  "lastname": "Dupont",
-  "displayName": "Ewen Dupont",
+  "lastname": "Papapresse",
+  "displayName": "Ewen Papapresse",
   "phonenumber": "",
   "age": 1,
-  "motive": "Papa pressé",
-  "symptoms": ["fièvre", "nez bouché"],
+  "motive": "Fièvre",
+  "symptoms": ["nez bouché"],
   "avatar": "dwayne1",
   "firstConsult": false
 }
@@ -29,7 +29,7 @@
   "displayName": "Mattéo Ventretendu",
   "phonenumber": "+213552032125",
   "age": 19,
-  "motive": "Mal au ventre",
+  "motive": "J'ai mal au ventre depuis hier et je suis fatigué.",
   "symptoms": ["Diahrée", "Envie de vomir"],
   "avatar": "dwayne3",
   "firstConsult": false
