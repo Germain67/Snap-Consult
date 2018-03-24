@@ -1,9 +1,14 @@
 <div class="patientListItemComponent">
-    <img class="patientListItemComponent_avatar" ng-src="/resources/images/{{$ctrl.patient.avatar}}">
-    <div class="patientListItemComponent_name">
+    <img ng-if="$ctrl.patient.lastname" class="patientListItemComponent_avatar" ng-src="/resources/images/{{$ctrl.patient.avatar}}.jpg">
+    <div ng-if="!$ctrl.patient.lastname" class="patientListItemComponent_number">{{$ctrl.patient.displayName}}</div>
+    <div ng-if="$ctrl.patient.lastname" class="patientListItemComponent_name">
         {{$ctrl.patient.displayName}} - {{$ctrl.patient.age}} ans
     </div>
-    <div class="patientListItemComponent_motif">
+    <div ng-if="!$ctrl.patient.lastname" class="patientListItemComponent_name">
+        Patient en salle d'attente
+    </div>
+    <div ng-if="$ctrl.patient.motive" class="patientListItemComponent_motif">
         <blockquote class="patientListItemComponent_motif-blockquote">"{{$ctrl.patient.motive}}"</blockquote>
     </div>
+    <div class="patientListItemComponent_badge" ng-if="$ctrl.patient.firstConsult">Nouveau</div>
 </div>

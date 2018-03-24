@@ -8,8 +8,9 @@ angular.module("homeComponent").component("doctorProfileComponent", {
     controller: [
         "$log",
         "$translate",
+        "$state",
 
-        function($log, $translate) {
+        function($log, $translate, $state) {
             "use strict";
             var ctrl = this;
 
@@ -17,14 +18,26 @@ angular.module("homeComponent").component("doctorProfileComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                ctrl.waitingTime = {time: "10"};
                 ctrl.waitingTimeText = $translate("estimatedWaitingTime", { time: ctrl.waitingTime });
                 ctrl.initDoctorDetails();
             }
 
             ctrl.initDoctorDetails = function() {
-                ctrl.avatar =  "../../resources/images/chinho.jpg"
-                ctrl.displayName = "Chin Ho CHEUNG"
+                ctrl.avatar =  "../../resources/images/Pierre-Morvan.jpg";
+                ctrl.displayName = "Dr. Duhâne Fils-de-Jean";
+                ctrl.address = "6 rue du Rock";
+                ctrl.city = "67000 Strasbourg";
+                ctrl.phoneNumber = "06 00 11 22 33";
+                ctrl.affluenceText = "Affluence élevée";
+            };
+
+            ctrl.computeWaitTime = function() {
+                ctrl.waitingTime = {time: "10"};
+                
+            };
+
+            ctrl.onContinue = function() {
+                $state.go("patientInfoComponent");
             };
         }
     ]
