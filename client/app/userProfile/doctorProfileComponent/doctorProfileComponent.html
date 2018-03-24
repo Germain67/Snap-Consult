@@ -1,0 +1,19 @@
+<div class="doctorProfileClass">
+    <header class="headerSection">
+        <div class="avatar">
+            <img class="avatar" ng-if="::$ctrl.avatar" ng-src="{{$ctrl.avatar}}"/>
+        </div>
+        <div class="doctorInfo">
+            <span class="mainText">{{$ctrl.displayName}}</span>
+        </div>
+    </header>
+    <body>
+        <div class="timeContainer">
+            <span class="time">{{$ctrl.estimatedWaitingTime}}</span>
+        </div>
+        <div class="profileInfoContainer"></div>
+    </body>
+    <footer>
+        <div class="buttonContainer"></div>
+    </footer>
+</div>
