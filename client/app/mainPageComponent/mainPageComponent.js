@@ -1,9 +1,9 @@
-angular.module("homeComponent").component("secondComponent", {
+angular.module("homeComponent").component("mainPageComponent", {
 
     bindings: {
     },
 
-    template: require("./secondComponent.html"),
+    template: require("./mainPageComponent.html"),
 
     controller: [
         "$log",
@@ -16,7 +16,7 @@ angular.module("homeComponent").component("secondComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                ctrl.test="chouette";
+                
             }
         }
     ]

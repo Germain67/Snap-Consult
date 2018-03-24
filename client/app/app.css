@@ -1,5 +1,5 @@
-@import "./secondComponent/secondComponent.css";
-
-html, body {
+html, body, .mainUIView {
     height:100%;
+    margin:0;
 }
+
