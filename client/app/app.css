@@ -1,5 +1,8 @@
-@import "./secondComponent/secondComponent.css";
+@import "./mainPageComponent/mainPageComponent.css";
+@import "./patientListComponent/patientListComponent.css";
 
-html, body {
+html, body, .mainUIView {
     height:100%;
+    margin:0;
 }
+

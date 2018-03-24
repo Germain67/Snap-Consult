@@ -2,7 +2,8 @@ import angular from 'angular'
 import uirouter from '@uirouter/angularjs'
 import routes from './app.routes'
 import homeComponent from './homeComponent'
-import secondComponent from './secondComponent/secondComponent'
+import mainPageComponent from './mainPageComponent/mainPageComponent'
+import patientListComponent from './patientListComponent/patientListComponent' 
 
 import styles from './app.css'
 
