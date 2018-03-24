@@ -1,28 +1,32 @@
-angular.module("homeComponent").component("patientInfoComponent", {
+angular.module("homeComponent").component("symptomesComponent", {
 
     bindings: {
     },
 
-    template: require("./patientInfoComponent.html"),
+    template: require("./symptomesComponent.html"),
 
     controller: [
         "$log",
         "$state",
-        "$http",
 
-        function($log, $state, $http) {
+        function($log, $state) {
             "use strict";
             var ctrl = this;
+            var fever;
 
             /***********************************************************/
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
+                console.log("symptomes");
+            };
+
+            ctrl.onBack = function() {
+                $state.go("patientInfoComponent");
             };
 
             ctrl.onContinue = function() {
-                $http({ method: "POST", url: "http://localhost:8080/adduser", data: {firstname: "Chloé", lastname: "Tobaco", age: "29"} });
-                $state.go("symptomes");
+                $state.go("interrogatoire");
             };
         }
     ]

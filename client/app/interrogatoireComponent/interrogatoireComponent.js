@@ -1,28 +1,35 @@
-angular.module("homeComponent").component("patientInfoComponent", {
+angular.module("homeComponent").component("interrogatoireComponent", {
 
     bindings: {
     },
 
-    template: require("./patientInfoComponent.html"),
+    template: require("./interrogatoireComponent.html"),
 
     controller: [
         "$log",
         "$state",
-        "$http",
 
-        function($log, $state, $http) {
+        function($log, $state) {
             "use strict";
             var ctrl = this;
+            ctrl.page = "page1";
+            ctrl.activity = "yes";
+            ctrl.medicaments = "no";
 
             /***********************************************************/
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
+                console.log("interro");
+                console.log(page);
+            };
+
+            ctrl.onBack = function() {
+                $state.go("symptomes");
             };
 
             ctrl.onContinue = function() {
-                $http({ method: "POST", url: "http://localhost:8080/adduser", data: {firstname: "Chloé", lastname: "Tobaco", age: "29"} });
-                $state.go("symptomes");
+                $state.go("finish");
             };
         }
     ]
