@@ -10,6 +10,7 @@ import patientListItemComponent from './patientListComponent/patientListItemComp
 import doctorProfileComponent from './userProfile/doctorProfileComponent/doctorProfileComponent'
 import patientDetailsComponent from './patientDetailsComponent/patientDetailsComponent'
 import patientReservePlaceComponent from './patientReservePlace/patientReservePlaceComponent'
+import patientBoardComponent from './patientBoard/patientBoardComponent'
 import interrogatoireComponent from './interrogatoireComponent/interrogatoireComponent'
 import symptomesComponent from './symptomesComponent/symptomesComponent'
 

@@ -1,0 +1,22 @@
+div.patientBoardComponent .blue-header {
+    height: 160px;
+    background: radial-gradient(#88c5e8, #2585f4);
+}
+
+div.patientBoardComponent .patient-info-card {
+    padding: 15px;
+    margin: -80px auto;
+    background-color: white;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 0 1em #ccc;
+}
+
+.bigIcon2 {
+    width: 6.5em;
+    height: 6.5em;
+}
+
+.timeContainer2 {
+    padding-top: 2rem;
+}
