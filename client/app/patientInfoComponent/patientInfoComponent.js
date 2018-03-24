@@ -7,8 +7,9 @@ angular.module("homeComponent").component("patientInfoComponent", {
 
     controller: [
         "$log",
+        "$state",
 
-        function($log) {
+        function($log, $state) {
             "use strict";
             var ctrl = this;
 
@@ -19,7 +20,7 @@ angular.module("homeComponent").component("patientInfoComponent", {
             };
 
             ctrl.onContinue = function() {
-                console.error("coucouc");
+                $state.go("reservePlace");
             };
         }
     ]
