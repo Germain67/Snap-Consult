@@ -1,0 +1,14 @@
+.doctorProfileClass {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.headerSection {
+    display: flex;
+    align-content: center;
+}
+
+.avatar {
+    width: 20em;
+    height: 20em;
+}

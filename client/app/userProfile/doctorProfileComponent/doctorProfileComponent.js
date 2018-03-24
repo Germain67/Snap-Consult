@@ -16,7 +16,7 @@ angular.module("homeComponent").component("doctorProfileComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                
+                ctrl.avatar =  "../../resources/images/chinho.jpg"
             }
         }
     ]
