@@ -8,8 +8,9 @@ angular.module("homeComponent").component("doctorProfileComponent", {
     controller: [
         "$log",
         "$translate",
+        "$state",
 
-        function($log, $translate) {
+        function($log, $translate, $state) {
             "use strict";
             var ctrl = this;
 
@@ -25,6 +26,10 @@ angular.module("homeComponent").component("doctorProfileComponent", {
             ctrl.initDoctorDetails = function() {
                 ctrl.avatar =  "../../resources/images/chinho.jpg"
                 ctrl.displayName = "Chin Ho CHEUNG"
+            };
+
+            ctrl.onContinue = function() {
+                $state.go("patientInfoComponent");
             };
         }
     ]
