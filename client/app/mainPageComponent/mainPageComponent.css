@@ -11,17 +11,11 @@
 }
 
 .mainPageComponent_left {
-    border: solid 1px black;
-    min-width: 200px;
+    border-right: solid 1px #CECECC;
+    min-width: 500px;
     flex:0;
 }
 
 .mainPageComponent_right {
-    border: solid 1px black;
     flex: 1;
-}
-
-.mainPageComponent_footer {
-    border: solid 1px black;
-    height: 20px;
 }

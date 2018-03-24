@@ -21,6 +21,7 @@ angular.module("homeComponent").component("mainPageComponent", {
             /***********************************************************/
             ctrl.$onInit = function() {
                 this.currentPatient = "";
+                patientService.getPatients();
             }
 
             ctrl.onPatientClick = function(patient) {
