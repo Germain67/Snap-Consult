@@ -26,7 +26,7 @@ angular.module("homeComponent").component("mainPageComponent", {
                 ctrl.getPatients().then(function () {
                     ctrl.currentPatient = ctrl.patients[0];
                 });
-                //$interval(function() { ctrl.getPatients(); }, 5000);
+                $interval(function() { ctrl.getPatients(); }, 5000);
             }
 
             ctrl.getPatients = function () {

@@ -19,3 +19,10 @@
     background: white;
     margin-left:auto;
 }
+
+.headerComponent_doctor {
+    position: absolute;
+    right: 68px;
+    top: 20px;
+    color: white;
+}
