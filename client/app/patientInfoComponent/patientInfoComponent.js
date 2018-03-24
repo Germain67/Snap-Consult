@@ -21,7 +21,7 @@ angular.module("homeComponent").component("patientInfoComponent", {
             };
 
             ctrl.onContinue = function() {
-                // $http({ method: "POST", url: "/adduser", data: {} });
+                $http({ method: "POST", url: "http://localhost:8080/adduser", data: {} });
                 $state.go("reservePlace");
             };
         }
