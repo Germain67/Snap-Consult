@@ -1,7 +1,8 @@
 angular.module("homeComponent").component("patientListItemComponent", {
 
     bindings: {
-        patient: "<"
+        patient: "<",
+        currentPatient: "<"
     },
 
     template: require("./patientListItemComponent.html"),
@@ -17,8 +18,14 @@ angular.module("homeComponent").component("patientListItemComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                
+                ctrl.class = ctrl.currentPatient._id === ctrl.patient._id ? "patientListItemComponentSelected" : "";
             }
+
+            ctrl.$onChanges = function(changesObj) {
+                if (changesObj.currentPatient) {
+                    ctrl.class = ctrl.currentPatient._id === ctrl.patient._id ? "patientListItemComponentSelected" : "";
+                }
+            };
         }
     ]
 });

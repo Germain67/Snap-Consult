@@ -6,6 +6,11 @@
     flex-direction: column;
 }
 
+.patientDetailsComponentSelected {
+    color:white;
+    background: red;
+}
+
 .patientDetailsHeader {
     position:relative;
     height: 65px;
@@ -87,4 +92,5 @@
     color: white;
     font-size: 15px;
     cursor: pointer;
+    border-radius: 26px;
 }

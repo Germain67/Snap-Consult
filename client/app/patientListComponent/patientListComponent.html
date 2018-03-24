@@ -1,4 +1,12 @@
 <div class="patientListComponent">
-    <patient-list-item-component ng-repeat="patient in $ctrl.patients" patient="patient" ng-click="$ctrl.onClick(patient)">
+    <patient-list-item-component 
+        ng-repeat="patient in $ctrl.patients" 
+        current-patient="$ctrl.currentPatient" 
+        patient="patient" 
+        ng-click="$ctrl.onClick(patient)">
     </patient-list-item-component>
+
+    <div class="patientListComponent_noPatients" ng-if="$ctrl.patients.length === 0">
+        Pas de patient en salle d'attente
+    </div>
 </div>
