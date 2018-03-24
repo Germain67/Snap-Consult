@@ -21,27 +21,6 @@ db.loadDatabase(function (err) {
   }
 });
 
-
-/*mongoose.connect('mongodb://localhost/snap_consult');
-
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', () => { console.log('db successfully connected'); });
-
-const userSchema = mongoose.Schema({
-  email: String,
-  firstname: String,
-  lastname: String,
-  phonenumber: String,
-  displayName: String,
-  age: Number,
-  motive: String,
-  symptoms: [String],
-  avatar: String,
-  firstConsult: Boolean
-});
-const User = mongoose.model('users', userSchema);*/
-
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', (req, res) => {
   res.send('Server is running :)');
@@ -63,6 +42,7 @@ app.post('/adduser', (req, res) => {
   var symptoms = req.body.symptoms;
   var avatar = req.body.avatar;
   var firstConsult = req.body.firstConsult;
+  var timeSubscribed = new Date(Date.now());
 
   const myuser = {
     email : email,
@@ -74,7 +54,8 @@ app.post('/adduser', (req, res) => {
     motive: motive,
     symptoms: symptoms,
     avatar: avatar,
-    firstConsult: firstConsult
+    firstConsult: firstConsult,
+    timeSubscribed: timeSubscribed
   };
   db.insert(myuser, (err, resp) => {
     if (err) {
@@ -87,7 +68,7 @@ app.post('/adduser', (req, res) => {
 });
 
 app.get('/users', (req, res) => {
-  db.find({}, (err, users) => {
+  db.find({}).sort({ timeSubscribed: 1 }).exec((err, users) => {
     if (err) {
       console.error(err);
       res.status(500).send(err);
@@ -97,17 +78,3 @@ app.get('/users', (req, res) => {
 });
 
 app.listen(8080);
-
-/* Reste d'une fonctionnalitée laissée à l'abandon *chaton mort*
-
-  app.post('/uploadavatar', (req, res) => {
-  var avatar = req.body.avatar;
-  var iduser = req.body.id;
-  var imageAsBase64 = fs.readFileSync(avatar, 'base64');
-
-  User.update({_id: userid}, {
-      avatar: imageAsBase64
-  }, function(err, affected, resp) {
-     console.log(resp);
-  });
-}); */
