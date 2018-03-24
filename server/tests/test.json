@@ -65,6 +65,12 @@
 							"value": "diahrée",
 							"type": "text",
 							"description": ""
+						},
+						{
+							"key": "avatar",
+							"value": "dwayne5",
+							"description": "",
+							"type": "text"
 						}
 					]
 				},

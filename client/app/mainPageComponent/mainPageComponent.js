@@ -1,4 +1,4 @@
-import patientService from '../services/patientService' 
+import patientService from '../services/patientService'
 
 angular.module("homeComponent").component("mainPageComponent", {
 
@@ -21,6 +21,8 @@ angular.module("homeComponent").component("mainPageComponent", {
             /***********************************************************/
             ctrl.$onInit = function() {
                 this.currentPatient = "";
+                this.listTabs = ["File d'attente", "Statistiques"];
+                this.currentTab = this.listTabs[0];
                 patientService.getPatients();
             }
 
