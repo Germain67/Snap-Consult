@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
 const fs = require('fs');
 const cors = require('cors');
 
@@ -33,8 +32,8 @@ const fixName = (name) => {
 
 app.post('/adduser', (req, res) => {
   var email = req.body.email;
-  var firstname = fixName(req.body.firstname);
-  var lastname = fixName(req.body.lastname);
+  var firstname = (req.body.firstname !== undefined) ? fixName(req.body.firstname) : "";
+  var lastname = (req.body.lastname !== undefined) ? fixName(req.body.lastname) : "";
   var displayName = firstname + " " + lastname;
   var age = req.body.age;
   var phonenumber = req.body.phonenumber;
@@ -75,6 +74,10 @@ app.get('/users', (req, res) => {
     }
     res.status(200).send(users);
   });
+});
+
+app.delete('/users/:id', (req, res) => {
+
 });
 
 app.listen(8080);
