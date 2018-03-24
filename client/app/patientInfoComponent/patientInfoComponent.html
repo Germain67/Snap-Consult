@@ -1,15 +1,20 @@
-<div class="container patientInfoComponent">
-    <label for="fname">First Name</label>
-    <input class="u-full-width inputField" type="text" id="fname" name="firstname" placeholder="Your name..">
+<div class="patientInfoComponent">
 
-    <label for="lname">Last Name</label>
-    <input class="u-full-width inputField" type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <div class="u-full-width blue-header"></div>
 
-    <label for="Telephone">Telephone</label>
-    <input class=" u-full-width inputField" type="text" id="Telephone" name="Telephone" placeholder="Your telephone..">
+    <div class="patient-info-card">
+        <label for="fname">First Name</label>
+        <input class="u-full-width inputField" type="text" id="fname" name="firstname" placeholder="Your first name..">
 
-    <label for="mail">Email address</label>
-    <input class="u-full-width inputField" type="email" id="mail" name="mail" placeholder="Your email address..">
+        <label for="lname">Last Name</label>
+        <input class="u-full-width inputField" type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-    <div class="u-full-width" style="text-align:center; margin-top: 20px;"><button class="button-primary" ng-click="$ctrl.onContinue()">Continue</button></div>
+        <label for="mail">Email address</label>
+        <input class="u-full-width inputField" type="email" id="mail" name="mail" placeholder="Your email address..">
+
+        <label for="Telephone">Telephone</label>
+        <input class=" u-full-width inputField" type="text" id="Telephone" name="Telephone" placeholder="Your telephone..">
+
+        <div class="u-full-width" style="text-align:center; margin-top: 20px;"><button class="button-primary" ng-click="$ctrl.onContinue()">Continue</button></div>
+    </div>
 </div>
