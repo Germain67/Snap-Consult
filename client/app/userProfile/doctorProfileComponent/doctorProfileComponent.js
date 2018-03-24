@@ -16,12 +16,14 @@ angular.module("homeComponent").component("doctorProfileComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                ctrl.patients = [
-                    { name:"mathieu", motif:"hjgjhghjghjgjhg"},
-                    { name:"truc", motif:"hjgjhghjghjgjhg"},
-                    { name:"chose", motif:"hjgjhghjghjgjhg"}
-                ];
+                ctrl.estimatedWaitingTime = "10min";
+                ctrl.initDoctorDetails();
             }
+
+            ctrl.initDoctorDetails = function() {
+                ctrl.avatar =  "../../resources/images/chinho.jpg"
+                ctrl.displayName = "Chin Ho CHEUNG"
+            };
         }
     ]
 });
