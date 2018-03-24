@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const fs = require('fs');
 
 const app = express();
 
@@ -19,17 +20,43 @@ const userSchema = mongoose.Schema({
   email: String,
   firstname: String,
   lastname: String,
-  phonenumber: String
+  phonenumber: String,
+  displayName: String,
+  age: Number
+  // avatar: String
 });
-const Users = mongoose.model('users', userSchema);
+const User = mongoose.model('users', userSchema);
 
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', (req, res) => {
-  res.send('hello world');
+  res.send('Server is running :)');
 });
 
-app.get('/adduser', (req, res) => {
-  const myuser = new Users({ login: '', password: '', email: '', firstname: '', lastname: '', phonenumber: '' });
+// Beautify lastname and firstname :D
+const fixName = (name) => {
+  return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+};
+
+app.post('/adduser', (req, res) => {
+  var login = req.body.login;
+  var password = req.body.password;
+  var email = req.body.email;
+  var firstname = fixName(req.body.firstname);
+  var lastname = fixName(req.body.lastname);
+  var displayName = firstname + " " + lastname;
+  var age = req.body.age;
+  var phonenumber = req.body.phonenumber;
+
+  const myuser = new User({
+    login : login,
+    password : password,
+    email : email,
+    firstname : firstname,
+    lastname : lastname,
+    displayName: displayName,
+    age: age,
+    phonenumber : phonenumber
+  });
 
   myuser.save((err, resp) => {
     if (err) {
@@ -43,7 +70,7 @@ app.get('/adduser', (req, res) => {
 });
 
 app.get('/users', (req, res) => {
-  Users.find((err, users) => {
+  User.find((err, users) => {
     if (err) {
       console.error(err);
       res.status(500).send(err);
@@ -53,3 +80,17 @@ app.get('/users', (req, res) => {
 });
 
 app.listen(8080);
+
+/* Reste d'une fonctionnalitée laissée à l'abandon *chaton mort*
+
+  app.post('/uploadavatar', (req, res) => {
+  var avatar = req.body.avatar;
+  var iduser = req.body.id;
+  var imageAsBase64 = fs.readFileSync(avatar, 'base64');
+
+  User.update({_id: userid}, {
+      avatar: imageAsBase64
+  }, function(err, affected, resp) {
+     console.log(resp);
+  });
+}); */

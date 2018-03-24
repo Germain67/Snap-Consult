@@ -9,5 +9,9 @@ export default function routes($stateProvider) {
         .state('patientInfoComponent', {
             url: '/patient',
             component: "patientInfoComponent",
+        })
+        .state('doctorProfileComponent', {
+            url: '/doctor',
+            component: "doctorProfileComponent",
         });
 }

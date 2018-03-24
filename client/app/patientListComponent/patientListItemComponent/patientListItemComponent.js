@@ -1,9 +1,10 @@
-angular.module("homeComponent").component("doctorProfileComponent", {
+angular.module("homeComponent").component("patientListItemComponent", {
 
     bindings: {
+        patient: "<"
     },
 
-    template: require("./doctorProfileComponent.html"),
+    template: require("./patientListItemComponent.html"),
 
     controller: [
         "$log",
@@ -16,14 +17,8 @@ angular.module("homeComponent").component("doctorProfileComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                ctrl.estimatedWaitingTime = "10min";
-                ctrl.initDoctorDetails();
+                
             }
-
-            ctrl.initDoctorDetails = function() {
-                ctrl.avatar =  "../../resources/images/chinho.jpg"
-                ctrl.displayName = "Chin Ho CHEUNG"
-            };
         }
     ]
 });
