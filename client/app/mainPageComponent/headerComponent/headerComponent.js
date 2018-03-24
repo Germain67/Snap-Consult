@@ -1,11 +1,9 @@
-import patientService from '../services/patientService' 
-
-angular.module("homeComponent").component("mainPageComponent", {
+angular.module("homeComponent").component("headerComponent", {
 
     bindings: {
     },
 
-    template: require("./mainPageComponent.html"),
+    template: require("./headerComponent.html"),
 
     controller: [
 
@@ -20,11 +18,7 @@ angular.module("homeComponent").component("mainPageComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                this.currentPatient = "";
-            }
-
-            ctrl.onPatientClick = function(patient) {
-                this.currentPatient = patient;
+            
             }
         }
     ]
