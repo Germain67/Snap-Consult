@@ -1,8 +1,9 @@
 <div class="patientListItemComponent">
+    <img class="patientListItemComponent_avatar" ng-src="/resources/images/{{$ctrl.patient.avatar}}">
     <div class="patientListItemComponent_name">
-        {{$ctrl.patient.name}}
+        {{$ctrl.patient.displayName}} - {{$ctrl.patient.age}} ans
     </div>
     <div class="patientListItemComponent_motif">
-        {{$ctrl.patient.motif}}
+        <blockquote class="patientListItemComponent_motif-blockquote">"{{$ctrl.patient.motif}}"</blockquote>
     </div>
 </div>
