@@ -6,11 +6,13 @@ angular.module("homeComponent").component("doctorProfileComponent", {
     template: require("./doctorProfileComponent.html"),
 
     controller: [
+        "$q",
         "$log",
         "$translate",
         "$state",
+        "patientService",
 
-        function($log, $translate, $state) {
+        function($q,$log, $translate, $state, patientService) {
             "use strict";
             var ctrl = this;
 
@@ -29,6 +31,8 @@ angular.module("homeComponent").component("doctorProfileComponent", {
                 ctrl.city = "67000 Strasbourg";
                 ctrl.phoneNumber = "06 00 11 22 33";
                 ctrl.affluenceText = "Affluence élevée";
+
+                ctrl.getPatients();
             };
 
             ctrl.computeWaitTime = function() {
@@ -38,6 +42,31 @@ angular.module("homeComponent").component("doctorProfileComponent", {
 
             ctrl.onContinue = function() {
                 $state.go("patientInfoComponent");
+            };
+
+            ctrl.getPatients = function () {
+                return $q(function (resolve, reject) {
+                    patientService.getPatients()
+                        .then(function (patients) {
+                            ctrl.nb = patients.length - 1;
+                            var time = (patients.length - 1)*15;
+
+                            var min = time%60;
+
+                            if (!min) {
+                                min = "00";
+                            }
+
+                            var hours = Math.floor(time/60);
+
+                            ctrl.time = hours + "h" + min;
+                            resolve();
+                        })
+                        .catch(function () { reject(); });
+
+                    /*this.listTabs = ["File d'attente", "Statistiques"];
+                    this.currentTab = this.listTabs[0];*/
+                })
             };
         }
     ]
