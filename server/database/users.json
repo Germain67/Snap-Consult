@@ -10,7 +10,8 @@
   "symptoms": ["nez bouché"],
   "avatar": "dwayne1",
   "firstConsult": false,
-  "timeSubscribed": "2018-03-24T11:37:52.296Z"
+  "timeSubscribed": "2018-03-24T11:37:52.296Z",
+  "antecedent": ["Grippe"]
 },
 {
   "_id": "lUCXoBel3JRz31Ez",
@@ -38,7 +39,8 @@
   "symptoms": ["Diahrée", "Envie de vomir"],
   "avatar": "dwayne3",
   "firstConsult": false,
-  "timeSubscribed": "2018-02-06T11:37:52.296Z"
+  "timeSubscribed": "2018-02-06T11:37:52.296Z",
+  "antecedent": ["Rhume", "Hépatite B"]
 },
 {
   "_id": "DmmjzEPBk9VUNrO4",

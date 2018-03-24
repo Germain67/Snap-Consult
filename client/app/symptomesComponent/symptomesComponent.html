@@ -1,0 +1,41 @@
+<div class="symptomesComponent">
+
+  <div class="u-full-width blue-header"></div>
+
+  <div class="patient-info-card">
+    <label for="fname">Pourquoi venez-vous aujourd'hui chez le médecin ?</label>
+    <input class="u-full-width inputField" type="text" id="fname" name="firstname" placeholder="Expliquez ce qui vous amène" value="Mal de ventre">
+
+    <label for="lname">Y a-t-il d'autres signes qui vous inquiètent ?</label>
+    <textarea class="u-full-width inputField" type="text" id="lname" name="lastname"
+    placeholder="Précisez tout autre élement utile                      Exemple : j'ai mal au ventre">Diarrhées
+Envie de vomir</textarea>
+
+    <!--
+    <p>Depuis combien de temps ?</p>
+    <input type="radio" ng-model="$ctrl.fever" value="yes">Quelques jours</input>
+    <input type="radio" ng-model="$ctrl.fever" value="no">Une semaine</input>
+    <input type="radio" ng-model="$ctrl.fever" value="no">Quelques semaines</input>
+    <input type="radio" ng-model="$ctrl.fever" value="no">Un mois</input>
+    <input type="radio" ng-model="$ctrl.fever" value="no">Plusieurs mois</input>
+
+    <p>Intensité entre 1 et 10</p>
+    <input type="range" value="5" max="10" min="1" step="1">
+
+    <label for="mail">Où avez vous mal ?</label>
+    <input class="u-full-width inputField" type="email" id="mail" name="mail" placeholder="???">
+
+    <p>Combien de diarrhées sur les 24 dernières heures ?</p>
+    <input type="range" value="1" max="10" min="1" step="1">
+
+    <p>Avez-vous de la fièvre ou une sensation de fièvre ?</p>
+    <input type="radio" ng-model="$ctrl.fever" value="yes">Oui</input>
+    <input type="radio" ng-model="$ctrl.fever" value="no">Non</input>
+  -->
+
+    <div class="u-full-width" style="text-align:center; margin-top: 20px;">
+      <button class="button-primary" ng-click="$ctrl.onBack()">Précédent</button>
+      <button class="button-primary" ng-click="$ctrl.onContinue()">Continuer</button>
+    </div>
+  </div>
+</div>

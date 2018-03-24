@@ -26,7 +26,7 @@
 						},
 						{
 							"key": "firstname",
-							"value": "",
+							"value": "test",
 							"type": "text",
 							"description": ""
 						},
@@ -69,6 +69,18 @@
 						{
 							"key": "avatar",
 							"value": "dwayne5",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "antecedent",
+							"value": "gastro",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "antecedent",
+							"value": "grippe aviaire",
 							"description": "",
 							"type": "text"
 						}
