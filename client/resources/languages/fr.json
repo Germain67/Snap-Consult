@@ -1,4 +1,6 @@
 {
     "next": "Suivant",
-    "estimatedWaitingTime": "Temps d'attente estimé: {{time}} minutes"
+    "estimatedWaitingTime": "Temps d'attente estimé",
+    "busyPeriod": "Affluence élevée",
+    "quietPeriod": "Affluence faible"
 }

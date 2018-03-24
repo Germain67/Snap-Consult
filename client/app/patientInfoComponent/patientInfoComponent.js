@@ -8,8 +8,9 @@ angular.module("homeComponent").component("patientInfoComponent", {
     controller: [
         "$log",
         "$state",
+        "$http",
 
-        function($log, $state) {
+        function($log, $state, $http) {
             "use strict";
             var ctrl = this;
 
@@ -20,6 +21,7 @@ angular.module("homeComponent").component("patientInfoComponent", {
             };
 
             ctrl.onContinue = function() {
+                // $http({ method: "POST", url: "/adduser", data: {} });
                 $state.go("reservePlace");
             };
         }
