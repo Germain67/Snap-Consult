@@ -2,3 +2,12 @@ div.patientReservePlaceComponent .blue-header {
     height: 160px;
     background: radial-gradient(#88c5e8, #2585f4);
 }
+
+div.patientReservePlaceComponent .patient-info-card {
+    padding: 15px;
+    margin: -80px auto;
+    background-color: white;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 0 1em #ccc;
+}
