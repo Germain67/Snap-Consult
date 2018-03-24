@@ -1,0 +1,13 @@
+.headerComponent {
+    background: rgb(116, 203, 243);
+    height: 60px;
+    display:flex;
+}
+
+.headerComponent_avatar {
+    border-radius: 50%;
+    border: solid 2px white;
+    width:50px;
+    height: 50px;
+    background: white;
+}

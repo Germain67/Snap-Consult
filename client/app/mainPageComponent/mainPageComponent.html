@@ -1,10 +1,9 @@
 <div class="mainPageComponent">
-    <div class="mainPageComponent_header">
-        Header
-    </div>
+    <header-component></header-component>
+    
     <div class="mainPageComponent_main">
         <div class="mainPageComponent_left">
-            <patient-list-component></patient-list-component>
+            <patient-list-component on-patient-click="$ctrl.onPatientClick($patient)"></patient-list-component>
         </div>
         <div class="mainPageComponent_right">
             <patient-details-component patient="$ctrl.currentPatient"></patient-details-component>
