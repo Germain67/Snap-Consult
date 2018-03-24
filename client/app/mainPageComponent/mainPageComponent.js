@@ -34,6 +34,12 @@ angular.module("homeComponent").component("mainPageComponent", {
                     patientService.getPatients()
                         .then(function (patients) {
                             ctrl.patients = patients;
+                            if (ctrl.currentPatient) {
+                                ctrl.currentPatient = patients.find(function(patient) {
+                                    return patient._id === ctrl.currentPatient._id;
+                                });
+                            }
+                            if (!ctrl.currentPatient) { ctrl.currentPatient = ctrl.patients[0]; }
                             resolve();
                         })
                         .catch(function () { reject(); });

@@ -16,3 +16,9 @@
     background-color: lightgray;
     border-radius: 1px;
 }
+
+.patientListComponent_noPatients {
+    font-size: 17px;
+    text-align: center;
+    padding-top: 48px;
+}

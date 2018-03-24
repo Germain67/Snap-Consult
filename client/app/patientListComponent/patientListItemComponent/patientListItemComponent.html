@@ -1,4 +1,4 @@
-<div class="patientListItemComponent">
+<div class="patientListItemComponent {{$ctrl.class}}">
     <img ng-if="$ctrl.patient.lastname" class="patientListItemComponent_avatar" ng-src="/resources/images/{{$ctrl.patient.avatar}}.jpg">
     <div ng-if="!$ctrl.patient.lastname" class="patientListItemComponent_number">{{$ctrl.patient.displayName}}</div>
     <div ng-if="$ctrl.patient.lastname" class="patientListItemComponent_name">

@@ -3,10 +3,14 @@
 
     <div class="mainPageComponent_main">
         <div class="mainPageComponent_left">
-            <patient-list-component on-patient-click="$ctrl.onPatientClick($patient)" patients="$ctrl.patients"></patient-list-component>
+            <patient-list-component on-patient-click="$ctrl.onPatientClick($patient)" patients="$ctrl.patients" current-patient="$ctrl.currentPatient"></patient-list-component>
         </div>
         <div class="mainPageComponent_right">
-            <patient-details-component patient="$ctrl.currentPatient" on-close="$ctrl.close()"></patient-details-component>
+            <patient-details-component 
+                ng-if="$ctrl.currentPatient"
+                patient="$ctrl.currentPatient" 
+                on-close="$ctrl.close()">
+            </patient-details-component>
         </div>
     </div>
 </div>

@@ -2,6 +2,7 @@ angular.module("homeComponent").component("patientListComponent", {
 
     bindings: {
         patients: "<",
+        currentPatient: "<",
         onPatientClick : "&"
     },
 
@@ -18,11 +19,10 @@ angular.module("homeComponent").component("patientListComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-
-                ctrl.onClick = function(patient) {
-                    ctrl.onPatientClick({"$patient" : patient});
-                }
-                
+            }
+            
+            ctrl.onClick = function(patient) {
+                ctrl.onPatientClick({"$patient" : patient});
             }
         }
     ]

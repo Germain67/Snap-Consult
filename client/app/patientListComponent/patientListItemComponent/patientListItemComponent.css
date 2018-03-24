@@ -8,6 +8,10 @@
     color:#595965;
 }
 
+.patientListItemComponentSelected {
+    border:solid 1px #2585f4;
+}
+
 .patientListItemComponent:hover {
     background: #e3e3e3;
 }
