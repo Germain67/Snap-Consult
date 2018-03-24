@@ -1,7 +1,3 @@
-@import "./mainPageComponent/mainPageComponent.css";
-@import "./patientListComponent/patientListComponent.css";
-@import "./patientListComponent/patientListItemComponent/patientListItemComponent.css";
-@import "./patientDetailsComponent/patientDetailsComponent.css";
 
 html, body, .mainUIView {
     height:100%;

@@ -1,9 +1,9 @@
-angular.module("homeComponent").component("secondComponent", {
+angular.module("homeComponent").component("doctorProfileComponent", {
 
     bindings: {
     },
 
-    template: require("./secondComponent.html"),
+    template: require("./doctorProfileComponent.html"),
 
     controller: [
         "$log",
@@ -16,7 +16,11 @@ angular.module("homeComponent").component("secondComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                ctrl.test="chouette";
+                ctrl.patients = [
+                    { name:"mathieu", motif:"hjgjhghjghjgjhg"},
+                    { name:"truc", motif:"hjgjhghjghjgjhg"},
+                    { name:"chose", motif:"hjgjhghjghjgjhg"}
+                ];
             }
         }
     ]
