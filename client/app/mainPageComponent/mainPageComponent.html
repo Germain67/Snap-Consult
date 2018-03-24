@@ -1,11 +1,12 @@
 <div class="mainPageComponent">
     <header-component></header-component>
-    
+
     <div class="mainPageComponent_main">
         <div class="mainPageComponent_left">
             <patient-list-component on-patient-click="$ctrl.onPatientClick($patient)"></patient-list-component>
         </div>
         <div class="mainPageComponent_right">
+            <symptomes-component></symptomes-component>
             <patient-details-component patient="$ctrl.currentPatient"></patient-details-component>
         </div>
     </div>
