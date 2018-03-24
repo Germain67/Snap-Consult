@@ -15,7 +15,7 @@ angular.module("homeComponent").service("patientService", [
 
                 })
                     .then(function success(response) {
-                        var patients = [];
+                        var patients = response.data;
                         resolve(patients);
                     })
                     .catch(function failure(response) {
