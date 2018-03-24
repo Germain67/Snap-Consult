@@ -4,10 +4,10 @@ import routes from './app.routes'
 import homeComponent from './homeComponent'
 import mainPageComponent from './mainPageComponent/mainPageComponent'
 import patientInfoComponent from './patientInfoComponent/patientInfoComponent' 
+import patientListComponent from './patientListComponent/patientListComponent' 
 import patientListItemComponent from './patientListComponent/patientListItemComponent/patientListItemComponent' 
 import doctorProfileComponent from './userProfile/doctorProfileComponent/doctorProfileComponent' 
 import patientDetailsComponent from './patientDetailsComponent/patientDetailsComponent' 
-
 
 
 angular.module('snapConsult', [uirouter, 'pascalprecht.translate', homeComponent])
