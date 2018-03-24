@@ -2,6 +2,7 @@
     display: flex;
     flex-flow: column nowrap;
     font-family: lato;
+    color: #5a5a5a;
 }
 
 .headerSection {
@@ -117,6 +118,4 @@
     width: 6rem;
     height: 6rem;
     align-self: center;
-    color: red;
-    fill: yellow;
 }
