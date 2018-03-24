@@ -26,7 +26,7 @@
 						},
 						{
 							"key": "firstname",
-							"value": "test",
+							"value": "",
 							"type": "text",
 							"description": ""
 						},
@@ -107,6 +107,27 @@
 					]
 				},
 				"description": "List all users in db"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/users/4g5QW8VddejLjJwf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"4g5QW8VddejLjJwf"
+					]
+				}
 			},
 			"response": []
 		}
