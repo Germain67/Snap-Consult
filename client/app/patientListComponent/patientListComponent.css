@@ -2,4 +2,17 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    padding: 10px 0 0 0;
+}
+
+.patientListComponent::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+
+.patientListComponent::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+    border-radius: 1px;
 }

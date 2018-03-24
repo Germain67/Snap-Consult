@@ -3,7 +3,7 @@ angular.module("homeComponent").service("patientService", [
     "$log",
     "$http",
 
-    function ($log) {
+    function ($log, $http) {
         "use strict";
         var service = this;
 
