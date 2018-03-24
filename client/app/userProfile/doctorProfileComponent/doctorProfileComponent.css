@@ -34,13 +34,13 @@
 
 .doctorInfo {
     padding: 0.75rem 0;
-    font-size: 2rem;
+    font-size: 3rem;
     color: white;
 }
 
 .timeContainer {
     padding-top: 1rem;
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
     display: flex;
     flex-flow: column;
@@ -74,7 +74,10 @@
 }
 
 .usualBackground {
-    background: #fafafa;
+    background: #f2f2f2;
+    text-align: center;
+    height: 50rem;
+    
 }
 
 .profileInfoContainer {
@@ -95,14 +98,17 @@
     display: flex;
     flex-flow: row;
     line-height: 2rem;
+    font-size: 1.6rem;
 }
 .numberClass {
     display: flex;
     flex-flow: row;
+    font-size: 1.6rem;
 }
 .affluenceClass {
     display: flex;
     flex-flow: row;
+    font-size: 1.6rem;
 }
 
 .smallIcon {
