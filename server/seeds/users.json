@@ -3,7 +3,8 @@
   "password": "dwayne",
   "email": "germain.clauss@gmail.com",
   "firstname": "Germain",
-  "lastname": "CLAUSS",
+  "lastname": "Clauss",
+  "displayName": "Germain Clauss",
   "phonenumber": "+33622441559"
 }
 {
@@ -11,6 +12,7 @@
   "password": "dwayne",
   "email": "mohamed.azzouz@gmail.com",
   "firstname": "Mohamed",
-  "lastname": "AZZOUZ",
+  "lastname": "Azzouz",
+  "displayName": "Mohamed Azzouz",
   "phonenumber": "+213552037421"
 }
