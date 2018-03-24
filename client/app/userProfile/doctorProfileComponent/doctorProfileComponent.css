@@ -1,7 +1,6 @@
 .doctorProfileClass {
     display: flex;
     flex-flow: column nowrap;
-    font-family: lato;
     color: #5a5a5a;
 }
 
@@ -34,7 +33,7 @@
 
 .doctorInfo {
     padding: 0.75rem 0;
-    font-size: 3rem;
+    font-size: 2rem;
     color: white;
 }
 
@@ -99,13 +98,18 @@
     display: flex;
     flex-flow: row;
     line-height: 2rem;
-    font-size: 1.6rem;
 }
+
+.addressClass label {
+    text-align: left;
+}
+
 .numberClass {
     display: flex;
     flex-flow: row;
     font-size: 1.6rem;
 }
+
 .affluenceClass {
     display: flex;
     flex-flow: row;

@@ -4,13 +4,13 @@
 
     <div class="patient-info-card">
         <label for="fname">Prénom</label>
-        <input class="u-full-width inputField" type="text" id="fname" name="firstname" placeholder="Your first name.." value="Chloé"></input>
+        <input class="u-full-width inputField" type="text" id="fname" name="firstname" ng-model="$ctrl.firstname" placeholder="Your first name.." value="{{$ctrl.firstname}}"></input>
 
         <label for="lname">Nom</label>
-        <input class="u-full-width inputField" type="text" id="lname" name="lastname" placeholder="Your last name.." value="Tobaco">
+        <input class="u-full-width inputField" type="text" id="lname" name="lastname" ng-model="$ctrl.lastname" placeholder="Your last name.." value="{{$ctrl.lastname}}">
 
         <label for="number">Âge</label>
-        <input class="u-full-width inputField" type="number" id="mail" name="mail" placeholder="Your age.." value="29">
+        <input class="u-full-width inputField" type="text" id="mail" name="mail" ng-model="$ctrl.age" placeholder="Your age.." value="{{$ctrl.age}}">
 
         <label for="mail">Adresse mail</label>
         <input class="u-full-width inputField" type="email" id="mail" name="mail" placeholder="Your email address.." value="chloe.tobaco@gmail.com">

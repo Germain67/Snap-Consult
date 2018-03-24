@@ -18,11 +18,15 @@ angular.module("homeComponent").component("patientInfoComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
+                ctrl.firstname = "Chloé";
+                ctrl.lastname = "Tobaco";
+                ctrl.age = "29";
+                ctrl.avatar = "dwayne2";
             };
 
             ctrl.onContinue = function() {
-                $http({ method: "POST", url: "http://localhost:8080/adduser", data: {firstname: "Chloé", lastname: "Tobaco", age: "29"} });
-                $state.go("symptomes");
+                $http({ method: "POST", url: "http://localhost:8080/adduser", data: {firstname: ctrl.firstname, lastname: ctrl.lastname, age: ctrl.age, avatar: ctrl.avatar} });
+                $state.go("reservePlace");
             };
         }
     ]
