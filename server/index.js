@@ -10,9 +10,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Allow CORS requests
-app.use(cors())
+app.use(cors());
 
-mongoose.connect('mongodb://localhost/snap_consult');
+var Datastore = require('nedb');
+var db = new Datastore({filename: './database/data.json', autoload: true });
+
+db.loadDatabase(function (err) {
+  if(err) {
+    console.error(err);
+  }
+});
+
+
+/*mongoose.connect('mongodb://localhost/snap_consult');
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -30,7 +40,7 @@ const userSchema = mongoose.Schema({
   avatar: String,
   firstConsult: Boolean
 });
-const User = mongoose.model('users', userSchema);
+const User = mongoose.model('users', userSchema);*/
 
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', (req, res) => {
@@ -54,7 +64,7 @@ app.post('/adduser', (req, res) => {
   var avatar = req.body.avatar;
   var firstConsult = req.body.firstConsult;
 
-  const myuser = new User({
+  const myuser = {
     email : email,
     firstname : firstname,
     lastname : lastname,
@@ -65,9 +75,8 @@ app.post('/adduser', (req, res) => {
     symptoms: symptoms,
     avatar: avatar,
     firstConsult: firstConsult
-  });
-
-  myuser.save((err, resp) => {
+  };
+  db.insert(myuser, (err, resp) => {
     if (err) {
       console.error(err);
       res.status(500).send(err);
@@ -78,7 +87,7 @@ app.post('/adduser', (req, res) => {
 });
 
 app.get('/users', (req, res) => {
-  User.find((err, users) => {
+  db.find({}, (err, users) => {
     if (err) {
       console.error(err);
       res.status(500).send(err);

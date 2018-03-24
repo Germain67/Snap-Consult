@@ -1,4 +1,4 @@
-{
+[{
   "email": "ewen.papapresse@gmail.com",
   "firstname": "Ewen",
   "lastname": "Papapresse",
@@ -9,7 +9,7 @@
   "symptoms": ["nez bouché"],
   "avatar": "dwayne1",
   "firstConsult": false
-}
+},
 {
   "email": "chloé.tabaco@gmail.com",
   "firstname": "chloé",
@@ -21,7 +21,7 @@
   "symptoms": [],
   "avatar": "dwayne2",
   "firstConsult": true
-}
+},
 {
   "email": "mattéo.ventretendu@gmail.com",
   "firstname": "Mattéo",
@@ -33,7 +33,7 @@
   "symptoms": ["Diahrée", "Envie de vomir"],
   "avatar": "dwayne3",
   "firstConsult": false
-}
+},
 {
   "email": "",
   "firstname": "",
@@ -44,4 +44,4 @@
   "motive": "",
   "symptoms": [],
   "avatar": ""
-}
+}]
