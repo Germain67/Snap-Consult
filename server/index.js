@@ -77,7 +77,18 @@ app.get('/users', (req, res) => {
 });
 
 app.delete('/users/:id', (req, res) => {
-
+  var iduser = req.params.id;
+  if(!iduser || iduser === "") {
+    res.status(400).send("Bad request: id of user is missing");
+  }
+  console.log(iduser);
+  db.remove({ _id: iduser }, {}, (err, resp) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send(err);
+    }
+    res.status(200).send("Successfully deleted user");
+  });
 });
 
 app.listen(8080);
