@@ -20,14 +20,17 @@ angular.module("homeComponent").component("mainPageComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                this.currentPatient = "";
+                ctrl.currentPatient = "";
+                ctrl.patients = [];
+                patientService.getPatients().then(function(patients) {
+                    ctrl.patients = patients;
+                });
                 this.listTabs = ["File d'attente", "Statistiques"];
                 this.currentTab = this.listTabs[0];
-                patientService.getPatients();
             }
 
             ctrl.onPatientClick = function(patient) {
-                this.currentPatient = patient;
+                ctrl.currentPatient = patient;
             }
         }
     ]
