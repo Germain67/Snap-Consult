@@ -16,8 +16,14 @@ angular.module("homeComponent").component("doctorProfileComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                ctrl.avatar =  "../../resources/images/chinho.jpg"
+                ctrl.estimatedWaitingTime = "10min";
+                ctrl.initDoctorDetails();
             }
+
+            ctrl.initDoctorDetails = function() {
+                ctrl.avatar =  "../../resources/images/chinho.jpg"
+                ctrl.displayName = "Chin Ho CHEUNG"
+            };
         }
     ]
 });

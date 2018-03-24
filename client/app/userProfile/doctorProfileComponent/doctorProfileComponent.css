@@ -5,10 +5,19 @@
 
 .headerSection {
     display: flex;
-    align-content: center;
+    flex-flow: column;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    border-bottom: solid 1px gray;
 }
 
 .avatar {
-    width: 20em;
-    height: 20em;
+    width: 20rem;
+    height: 20rem;
+}
+
+.doctorInfo {
+    padding: 0.75rem 0;
+    font-size: 3rem;
 }
