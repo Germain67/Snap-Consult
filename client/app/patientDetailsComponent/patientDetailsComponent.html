@@ -1,4 +1,15 @@
 <div class="patientDetailsComponent">
-    {{$ctrl.patient.name}}
-    {{$ctrl.patient.motif}}
+    <div class="patientDetailsHeader">
+        <img class="patientDetailsHeader_avatar" ng-src="/resources/images/{{$ctrl.patient.avatar}}"/>
+        <div class="patientDetailsHeader_name">{{$ctrl.patient.displayName}}</div>
+        <div class="patientDetailsHeader_age">{{$ctrl.patient.age}} ans</div>
+    </div>
+    <div class="patientDetailsMain">
+        <span class="patientDetailsTitle">Motif de consultation</span>
+        <span class="patientDetailsInfo">{{$ctrl.patient.motif}}</span>
+        <span class="patientDetailsTitle">Autres symptomes</span>
+        <span class="" ng-repeat="symptome in $ctrl.patient.symptomes">
+            {{symptome}}
+        </span>
+    </div>
 </div>

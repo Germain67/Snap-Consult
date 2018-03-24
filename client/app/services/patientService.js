@@ -1,24 +1,27 @@
 angular.module("homeComponent").service("patientService", [
-
+    "$q",
     "$log",
     "$http",
 
-    function ($log, $http) {
+    function ($q, $log, $http) {
         "use strict";
         var service = this;
 
         service.getPatients = function () {
-            $http({
-                method: "GET",
-                url: "localhost:8080/users",
-
-            })
-                .then(function success(response) {
+            return $q(function (resolve, reject) {
+                $http({
+                    method: "GET",
+                    url: "http://localhost:8080/users",
 
                 })
-                .catch(function failure(response) {
-
-                });
+                    .then(function success(response) {
+                        var patients = [];
+                        resolve(patients);
+                    })
+                    .catch(function failure(response) {
+                        reject();
+                    });
+            })
         }
     }
 ]);
