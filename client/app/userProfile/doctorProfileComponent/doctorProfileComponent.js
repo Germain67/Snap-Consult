@@ -7,8 +7,9 @@ angular.module("homeComponent").component("doctorProfileComponent", {
 
     controller: [
         "$log",
+        "$translate",
 
-        function($log) {
+        function($log, $translate) {
             "use strict";
             var ctrl = this;
 
@@ -16,7 +17,8 @@ angular.module("homeComponent").component("doctorProfileComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                ctrl.estimatedWaitingTime = "10min";
+                ctrl.waitingTime = {time: "10"};
+                ctrl.waitingTimeText = $translate("estimatedWaitingTime", { time: ctrl.waitingTime });
                 ctrl.initDoctorDetails();
             }
 

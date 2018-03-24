@@ -1,19 +1,41 @@
 .patientListItemComponent {
+    position: relative;
     background: #f0f0f0;
     cursor: pointer;
     margin: 0 10px 10px 10px;
     box-shadow: 0 2px 2px rgba(87,87,87,.2);
     min-height:60px;
+    color:#595965;
 }
 
 .patientListItemComponent:hover {
     background: #e3e3e3;
 }
 
+.patientListItemComponent_avatar {
+    position:absolute;
+    top: 8px;
+    left: 10px;
+    width:40px;
+    height:40px;
+    border-radius:50px;
+    border: solid 2px white;
+}
+
 .patientListItemComponent_name {
-    margin: 6px 10px 0;
+    position: absolute;
+    top: 12px;
+    left: 62px;
+    font-weight: 500;
 }
 
 .patientListItemComponent_motif {
-    margin: 4px 10px;
+    padding: 30px 0 0 62px;
+    font-size: 13px;
 } 
+
+.patientListItemComponent_motif-blockquote {
+    margin:0;
+    padding: 4px 5px 4px 0;
+    color: #6c6cbf;
+}

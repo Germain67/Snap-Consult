@@ -1,18 +1,22 @@
 <div class="doctorProfileClass">
     <header class="headerSection">
-        <div class="avatar">
+        <div class="avatarContainer halfCut">
             <img class="avatar" ng-if="::$ctrl.avatar" ng-src="{{$ctrl.avatar}}"/>
         </div>
         <div class="doctorInfo">
             <span class="mainText">{{$ctrl.displayName}}</span>
         </div>
     </header>
-    <body>
-        <div class="timeContainer">
-            <span class="time">{{$ctrl.estimatedWaitingTime}}</span>
+    <article class="bodyContent">
+        <div class="infoContainer">
+            <div class="timeContainer">
+                <span translate="estimatedWaitingTime"
+                translate-values='$ctrl.waitingTime'/>
+            </div>
+            <div class="profileInfoContainer">                
+            </div>
         </div>
-        <div class="profileInfoContainer"></div>
-    </body>
+    </article>
     <footer>
         <div class="buttonContainer"></div>
     </footer>

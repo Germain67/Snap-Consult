@@ -1,27 +1,40 @@
-<p>Symptôme principal (le plus génant) ?</p>
-<input type="text" />
+<div class="symptomesComponent">
 
-<p>Autres symptomes ?</p>
-<textarea></textarea>
+  <div class="u-full-width blue-header"></div>
 
-<p>Depuis combien de temps ?</p>
-<input type="radio" ng-model="$ctrl.fever" value="yes">Quelques jours</input>
-<input type="radio" ng-model="$ctrl.fever" value="no">Une semaine</input>
-<input type="radio" ng-model="$ctrl.fever" value="no">Quelques semaines</input>
-<input type="radio" ng-model="$ctrl.fever" value="no">Un mois</input>
-<input type="radio" ng-model="$ctrl.fever" value="no">Plusieurs mois</input>
+  <div class="patient-info-card">
+    <label for="fname">Pourquoi venez-vous aujourd'hui chez le médecin ?</label>
+    <input class="u-full-width inputField" type="text" id="fname" name="firstname" placeholder="Expliquez ce qui vous amène">
 
-<p>Intensité entre 1 et 10</p>
-<input type="range" value="5" max="10" min="1" step="1">
+    <label for="lname">Y a-t-il d'autres signes qui vous inquiètent ?</label>
+    <textarea class="u-full-width inputField" type="text" id="lname" name="lastname"
+    placeholder="Précisez tout autre élement utile                      Exemple : j'ai mal au ventre"></textarea>
 
-<p>Où avez vous mal ?</p>
-<input type="text" />
+    <!--
+    <p>Depuis combien de temps ?</p>
+    <input type="radio" ng-model="$ctrl.fever" value="yes">Quelques jours</input>
+    <input type="radio" ng-model="$ctrl.fever" value="no">Une semaine</input>
+    <input type="radio" ng-model="$ctrl.fever" value="no">Quelques semaines</input>
+    <input type="radio" ng-model="$ctrl.fever" value="no">Un mois</input>
+    <input type="radio" ng-model="$ctrl.fever" value="no">Plusieurs mois</input>
 
-<p>Combien de diarrhées sur les 24 dernières heures ?</p>
-<input type="range" value="1" max="10" min="1" step="1">
+    <p>Intensité entre 1 et 10</p>
+    <input type="range" value="5" max="10" min="1" step="1">
 
-<p>Avez-vous de la fièvre ou une sensation de fièvre ?</p>
-<input type="radio" ng-model="$ctrl.fever" value="yes">Oui</input>
-<input type="radio" ng-model="$ctrl.fever" value="no">Non</input>
+    <label for="mail">Où avez vous mal ?</label>
+    <input class="u-full-width inputField" type="email" id="mail" name="mail" placeholder="???">
 
-<p>Vos réponses ont bien été prises en compte et sont transmises au médecin.</p>
+    <p>Combien de diarrhées sur les 24 dernières heures ?</p>
+    <input type="range" value="1" max="10" min="1" step="1">
+
+    <p>Avez-vous de la fièvre ou une sensation de fièvre ?</p>
+    <input type="radio" ng-model="$ctrl.fever" value="yes">Oui</input>
+    <input type="radio" ng-model="$ctrl.fever" value="no">Non</input>
+  -->
+
+    <div class="u-full-width" style="text-align:center; margin-top: 20px;">
+      <button class="button-primary" ng-click="$ctrl.onBack()">Précédent</button>
+      <button class="button-primary" ng-click="$ctrl.onContinue()">Continuer</button>
+    </div>
+  </div>
+</div>

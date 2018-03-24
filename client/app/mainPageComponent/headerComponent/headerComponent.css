@@ -5,6 +5,11 @@
     border: solid 1px#CECECC;
 }
 
+.headerComponent_logo {
+    width: 116px;
+    margin: -4px 0 0 14px;
+}
+
 .headerComponent_avatar {
     border-radius: 50%;
     border: solid 2px white;

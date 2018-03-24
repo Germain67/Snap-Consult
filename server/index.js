@@ -2,11 +2,15 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const fs = require('fs');
+const cors = require('cors');
 
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+// Allow CORS requests
+app.use(cors())
 
 mongoose.connect('mongodb://localhost/snap_consult');
 
@@ -15,14 +19,14 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => { console.log('db successfully connected'); });
 
 const userSchema = mongoose.Schema({
-  login: String,
-  password: String,
   email: String,
   firstname: String,
   lastname: String,
   phonenumber: String,
   displayName: String,
-  age: Number
+  age: Number,
+  motive: String,
+  symptoms: [String]
   // avatar: String
 });
 const User = mongoose.model('users', userSchema);
@@ -38,24 +42,24 @@ const fixName = (name) => {
 };
 
 app.post('/adduser', (req, res) => {
-  var login = req.body.login;
-  var password = req.body.password;
   var email = req.body.email;
   var firstname = fixName(req.body.firstname);
   var lastname = fixName(req.body.lastname);
   var displayName = firstname + " " + lastname;
   var age = req.body.age;
   var phonenumber = req.body.phonenumber;
+  var motive = req.body.motive;
+  var symptoms = req.body.symptoms;
 
   const myuser = new User({
-    login : login,
-    password : password,
     email : email,
     firstname : firstname,
     lastname : lastname,
     displayName: displayName,
     age: age,
-    phonenumber : phonenumber
+    phonenumber : phonenumber,
+    motive: motive,
+    symptoms: symptoms
   });
 
   myuser.save((err, resp) => {
@@ -63,7 +67,6 @@ app.post('/adduser', (req, res) => {
       console.error(err);
       res.status(500).send(err);
     } else {
-      console.log(resp.firstname);
       res.status(200).send(resp);
     }
   });

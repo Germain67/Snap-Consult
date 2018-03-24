@@ -4,20 +4,49 @@
 }
 
 .headerSection {
+    position: relative;
     display: flex;
     flex-flow: column;
     align-items: center;
     padding-top: 5rem;
     padding-bottom: 3rem;
-    border-bottom: solid 1px gray;
 }
 
+.halfCut::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: -6px;
+    left: 0;
+    background-color: #58a4bf;
+    z-index: -1;
+}
 .avatar {
     width: 20rem;
     height: 20rem;
+    border-radius: 50%;
+    border: 0.75rem solid #fafafa;
+    z-index: 1;
 }
 
 .doctorInfo {
     padding: 0.75rem 0;
     font-size: 3rem;
+}
+
+.timeContainer {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.bodyContent {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.infoContainer {
+    width: 70%;
+    height: 80%;
 }

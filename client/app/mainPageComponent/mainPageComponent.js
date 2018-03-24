@@ -20,12 +20,15 @@ angular.module("homeComponent").component("mainPageComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                this.currentPatient = "";
-                patientService.getPatients();
+                ctrl.currentPatient = "";
+                ctrl.patients = [];
+                patientService.getPatients().then(function(patients) {
+                    ctrl.patients = patients;
+                });
             }
 
             ctrl.onPatientClick = function(patient) {
-                this.currentPatient = patient;
+                ctrl.currentPatient = patient;
             }
         }
     ]

@@ -6,9 +6,10 @@ angular.module("homeComponent").component("symptomesComponent", {
     template: require("./symptomesComponent.html"),
 
     controller: [
-        "$log",
+        "$log",,
+        "$state",
 
-        function($log) {
+        function($log, $state) {
             "use strict";
             var ctrl = this;
             var fever;
@@ -20,8 +21,12 @@ angular.module("homeComponent").component("symptomesComponent", {
                 console.log("symptomes");
             };
 
+            ctrl.onBack = function() {
+                $state.go("patientInfoComponent");
+            };
+
             ctrl.onContinue = function() {
-                console.error("test");
+                $state.go("interrogatoire");
             };
         }
     ]
