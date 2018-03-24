@@ -14,12 +14,22 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
             },
-            { test: /\.html$/, loader: "html-loader" },
-            {
-                test: /\.css/,
-                loaders: ['style-loader', 'css-loader'],
-                include: __dirname + '/app'
-              }
+            { test: /\.html$/, loader: "html-loader" }
+            // {
+            //     test: /\.css/,
+            //     use: [
+            //         {
+            //             loader: "style-loader"
+            //         },
+            //         {
+            //             loader: "css-loader",
+            //             options: {
+            //                 importLoaders: 1,
+            //             }
+            //         }
+            //     ],
+            //     include: __dirname + '/app'
+            //   }
         ]
     },
     devtool: "#inline-source-map"
