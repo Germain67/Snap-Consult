@@ -3,11 +3,11 @@
         Header
     </div>
     <div class="mainPageComponent_main">
-        <div class="mainPageComponent_right">
-            
+        <div class="mainPageComponent_left">
+            <patient-list-component></patient-list-component>
         </div>
-    </div>
-    <div class="mainPageComponent_footer">
-        Footer
+        <div class="mainPageComponent_right">
+            <patient-details-component patient="$ctrl.currentPatient"></patient-details-component>
+        </div>
     </div>
 </div>

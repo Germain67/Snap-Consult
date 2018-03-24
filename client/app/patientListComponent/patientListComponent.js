@@ -1,18 +1,14 @@
-import patientService from '../services/patientService' 
-
-angular.module("homeComponent").component("mainPageComponent", {
+angular.module("homeComponent").component("patientListComponent", {
 
     bindings: {
     },
 
-    template: require("./mainPageComponent.html"),
+    template: require("./patientListComponent.html"),
 
     controller: [
-        
         "$log",
-        "patientService",
 
-        function($log, patientService) {
+        function($log) {
             "use strict";
             var ctrl = this;
 
@@ -20,7 +16,11 @@ angular.module("homeComponent").component("mainPageComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                this.currentPatient = "";
+                ctrl.patients = [
+                    { name:"mathieu", motif:"hjgjhghjghjgjhg"},
+                    { name:"truc", motif:"hjgjhghjghjgjhg"},
+                    { name:"chose", motif:"hjgjhghjghjgjhg"}
+                ];
             }
         }
     ]
