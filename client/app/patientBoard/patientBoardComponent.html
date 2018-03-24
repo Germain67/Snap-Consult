@@ -1,0 +1,16 @@
+<div class="patientBoardComponent">
+
+    <div class="u-full-width blue-header"></div>
+
+     <div class="patient-info-card">
+        <div style="margin:25px 0 8px 0;font-size: 2.3rem;text-align:center;">Il y a <b>{{$ctrl.nb}}</b> personnes avant vous.</div>
+        <div class="infoContainer" style="margin:25px 0 8px 0;">
+            <img class="bigIcon bigIcon2"ng-src="/resources/images/svg/clock.svg"/>
+            <div class="timeContainer timeContainer2">
+                <span translate="estimatedWaitingTime"></span>
+                <span><b>{{$ctrl.time}}<b></span>
+            </div>
+        </div>
+    </div> 
+    
+</div>

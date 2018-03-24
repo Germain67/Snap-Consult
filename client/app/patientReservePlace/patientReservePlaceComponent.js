@@ -18,6 +18,10 @@ angular.module("homeComponent").component("patientReservePlaceComponent", {
                 /***********************************************************/
                 ctrl.$onInit = function() {
                 };
+
+                ctrl.onContinue = function() {
+                    $state.go("patientBoard");
+                };
             }
         ]
     });

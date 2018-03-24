@@ -25,5 +25,9 @@ export default function routes($stateProvider) {
         .state('reservePlace', {
             url: '/reserveplace',
             component: "patientReservePlaceComponent",
+        })
+        .state('patientBoard', {
+            url: '/patientboard',
+            component: "patientBoardComponent",
         });
 }
