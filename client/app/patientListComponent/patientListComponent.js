@@ -16,7 +16,11 @@ angular.module("homeComponent").component("patientListComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                
+                ctrl.patients = [
+                    { name:"mathieu", motif:"hjgjhghjghjgjhg"},
+                    { name:"truc", motif:"hjgjhghjghjgjhg"},
+                    { name:"chose", motif:"hjgjhghjghjgjhg"}
+                ];
             }
         }
     ]
