@@ -16,7 +16,6 @@ angular.module("homeComponent").component("patientInfoComponent", {
             /** INITIALISATION STUFF                                  **/
             /***********************************************************/
             ctrl.$onInit = function() {
-                console.log("iint");
             };
 
             ctrl.onContinue = function() {
