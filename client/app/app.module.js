@@ -9,8 +9,6 @@ import doctorProfileComponent from './userProfile/doctorProfileComponent/doctorP
 import patientDetailsComponent from './patientDetailsComponent/patientDetailsComponent' 
 
 
-// import styles from './app.css'
-
 
 angular.module('snapConsult', [uirouter, 'pascalprecht.translate', homeComponent])
     .config(routes);
