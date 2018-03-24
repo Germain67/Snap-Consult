@@ -41,6 +41,7 @@ app.post('/adduser', (req, res) => {
   var symptoms = req.body.symptoms;
   var avatar = req.body.avatar;
   var firstConsult = req.body.firstConsult;
+  var antecedent = req.body.antecedent;
   var timeSubscribed = new Date(Date.now());
 
   const myuser = {
@@ -54,8 +55,10 @@ app.post('/adduser', (req, res) => {
     symptoms: symptoms,
     avatar: avatar,
     firstConsult: firstConsult,
-    timeSubscribed: timeSubscribed
+    timeSubscribed: timeSubscribed,
+    antecedent: antecedent
   };
+  
   db.insert(myuser, (err, resp) => {
     if (err) {
       console.error(err);
