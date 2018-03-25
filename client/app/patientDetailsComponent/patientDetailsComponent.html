@@ -11,7 +11,8 @@
     </div>
     <div class="patientDetailsMain">
         <!--img class="patientDetailsIcon" src="/resources/images/reason.svg"/-->
-        <span class="patientDetailsTitle">Motif de consultation</span> 
+        <span class="patientDetailsTitle" ng-if="!$ctrl.patient.motive">Pas d'information</span> 
+        <span class="patientDetailsTitle" ng-if="$ctrl.patient.motive">Motif de consultation</span> 
         <span class="patientDetailsInfo">{{$ctrl.patient.motive}}</span>
         <!--img class="patientDetailsIcon" src="/resources/images/symptom.svg"/-->
         <span ng-if="$ctrl.patient.symptoms.length" class="patientDetailsTitle">Autres symptomes</span>
@@ -21,6 +22,6 @@
         <span ng-if="$ctrl.patient.antecedents.length" class="patientDetailsTitle">Antécédents</span>
         <span ng-repeat="antecedent in $ctrl.patient.antecedents">
             {{antecedent}}
-        </span>
+        </span>   
     </div>
 </div>

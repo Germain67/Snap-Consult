@@ -12,7 +12,7 @@
 
 .mainPageComponent_left {
     border-right: solid 1px #CECECC;
-    min-width: 500px;
+    min-width: 350px;
     flex:0;
 }
 
