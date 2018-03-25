@@ -26,7 +26,7 @@ angular.module("homeComponent").component("doctorProfileComponent", {
 
             ctrl.initDoctorDetails = function() {
                 ctrl.avatar =  "../../resources/images/michel.jpg";
-                ctrl.displayName = "Dr. Michel";
+                ctrl.displayName = "Consultation du Dr. Michel";
                 ctrl.address = "6 rue du Rock";
                 ctrl.city = "67000 Strasbourg";
                 ctrl.phoneNumber = "06 00 11 22 33";
