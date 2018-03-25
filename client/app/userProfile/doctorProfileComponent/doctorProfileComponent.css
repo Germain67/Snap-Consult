@@ -10,7 +10,7 @@
     flex-flow: column;
     align-items: center;
     padding-top: 5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
     background: radial-gradient(#88c5e8, #2585f4);
 }
 
@@ -25,8 +25,8 @@
     z-index: -1;
 }
 .avatar {
-    width: 14rem;
-    height: 14rem;
+    width: 135px;
+    height: 135px;
     border-radius: 50%;
     z-index: 1;
 }
