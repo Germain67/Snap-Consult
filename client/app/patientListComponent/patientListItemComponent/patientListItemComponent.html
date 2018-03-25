@@ -5,7 +5,7 @@
         {{$ctrl.patient.displayName}} - {{$ctrl.patient.age}} ans
     </div>
     <div ng-if="!$ctrl.patient.lastname" class="patientListItemComponent_name">
-        Patient en salle d'attente
+        Patient non identifié en salle d'attente
     </div>
     <div ng-if="$ctrl.patient.motive" class="patientListItemComponent_motif">
         <blockquote class="patientListItemComponent_motif-blockquote">"{{$ctrl.patient.motive}}"</blockquote>
