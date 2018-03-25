@@ -18,7 +18,9 @@
     border-radius: 3px;
     background-color: #fff;
     justify-content: space-between;
-    box-shadow: 0 2px 2px hsla(0,0%,50%,.22)
+    box-shadow: 0 2px 2px hsla(0,0%,50%,.22);
+    animation-duration: 0.5s;
+    animation-name: animSlideLeft;
 }
 
 .patientDetailsHeader_avatar {
@@ -69,6 +71,8 @@
     overflow-x: auto;
     overflow-y: hidden;
     padding:20px;
+    animation-duration: 0.5s;
+    animation-name: animSlideLeft;
 }
 
 .patientDetailsTitle {
