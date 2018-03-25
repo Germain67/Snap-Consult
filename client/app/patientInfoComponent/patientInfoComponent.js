@@ -9,8 +9,9 @@ angular.module("homeComponent").component("patientInfoComponent", {
         "$log",
         "$state",
         "$http",
+        "$interval",
 
-        function($log, $state, $http) {
+        function($log, $state, $http, $interval) {
             "use strict";
             var ctrl = this;
 
@@ -26,11 +27,11 @@ angular.module("homeComponent").component("patientInfoComponent", {
             };
 
             ctrl.onContinue = function() {
-                $http({ method: "POST", url: "http://localhost:8080/adduser", data: {firstname: ctrl.firstname, lastname: ctrl.lastname, age: ctrl.age, avatar: ctrl.avatar, motive: ctrl.motive} })
-                    .then(function() {
-                        $state.go("patientBoard");
-                    })
+                $interval(function() {
+                    $http({ method: "POST", url: "http://localhost:8080/adduser", data: {firstname: ctrl.firstname, lastname: ctrl.lastname, age: ctrl.age, avatar: ctrl.avatar, motive: ctrl.motive} }) 
+                }, 5000, 1);
                 
+                $state.go("patientBoard");
             };
         }
     ]

@@ -20,9 +20,9 @@ angular.module("homeComponent").component("patientBoardComponent", {
                 /***********************************************************/
                 ctrl.$onInit = function() {
                     ctrl.nb = 4;
-                    ctrl.time = "";
+                    ctrl.time = "1h00";
 
-                    ctrl.getPatients();
+                    // ctrl.getPatients();
 
                     $interval(function() { ctrl.getPatients(); }, 5000);
                     
@@ -36,7 +36,7 @@ angular.module("homeComponent").component("patientBoardComponent", {
                                     ctrl.time = "0h00";
                                     return;
                                 }
-                                
+
                                 ctrl.nb = patients.length - 1;
                                 var time = (patients.length - 1)*15;
 
