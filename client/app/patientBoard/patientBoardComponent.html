@@ -2,13 +2,21 @@
 
     <div class="u-full-width blue-header"></div>
 
-     <div class="patient-info-card">
-        <div style="margin:25px 0 8px 0;font-size: 2.3rem;text-align:center;">Il y a <b>{{$ctrl.nb}}</b> personnes avant vous.</div>
-        <div class="infoContainer" style="margin:25px 0 8px 0;">
-            <img class="bigIcon bigIcon2"ng-src="/resources/images/svg/clock.svg"/>
-            <div class="timeContainer timeContainer2">
-                <span translate="estimatedWaitingTime"></span>
-                <span><b>{{$ctrl.time}}<b></span>
+    <div class="patient-info-card">
+        <div style="height:160px;background-color:#07e807;text-align:center;">
+            <img style="margin-top:54px" width="50px" height="50px" ng-src="/resources/images/svg/valid.svg"/>
+        </div>
+
+        <div class="patient-card">
+            <div style="margin:25px 0 0 0;font-size: 2.3rem;text-align:center;"><b>Merci</b></div>
+            <div style="margin-bottom:8px;">Votre ticket est validé !</div>
+
+            <div>Il y a actuellement <span style="color:#2585f4"><b>{{$ctrl.nb}}</b></span> personnes devant vous. Le temps d'attente estimé est de :</div>
+            <div class="infoContainer" style="margin:25px 0 8px 0;">
+                <img class="bigIcon bigIcon2"ng-src="/resources/images/svg/clock.svg"/>
+                <div class="timeContainer timeContainer2">
+                    <span style="font-size:30px;color:#2585f4"><b>{{$ctrl.time}}</b></span>
+                </div>
             </div>
         </div>
     </div> 

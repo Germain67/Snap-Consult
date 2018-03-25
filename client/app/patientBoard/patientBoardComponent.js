@@ -32,6 +32,11 @@ angular.module("homeComponent").component("patientBoardComponent", {
                     return $q(function (resolve, reject) {
                         patientService.getPatients()
                             .then(function (patients) {
+                                if (!patients.length) {
+                                    ctrl.time = "0h00";
+                                    return;
+                                }
+                                
                                 ctrl.nb = patients.length - 1;
                                 var time = (patients.length - 1)*15;
 

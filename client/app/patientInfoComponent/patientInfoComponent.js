@@ -25,8 +25,11 @@ angular.module("homeComponent").component("patientInfoComponent", {
             };
 
             ctrl.onContinue = function() {
-                $http({ method: "POST", url: "http://localhost:8080/adduser", data: {firstname: ctrl.firstname, lastname: ctrl.lastname, age: ctrl.age, avatar: ctrl.avatar} });
-                $state.go("reservePlace");
+                $http({ method: "POST", url: "http://localhost:8080/adduser", data: {firstname: ctrl.firstname, lastname: ctrl.lastname, age: ctrl.age, avatar: ctrl.avatar} })
+                    .then(function() {
+                        $state.go("patientBoard");
+                    })
+                
             };
         }
     ]
