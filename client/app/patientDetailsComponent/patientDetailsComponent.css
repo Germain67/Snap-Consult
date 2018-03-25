@@ -1,5 +1,5 @@
 .patientDetailsComponent {
-    height: 100%;
+    height: calc(100% - 20px);
     background: #f0f0f0;
     display:flex;
     padding:10px;
