@@ -6,3 +6,20 @@ html, body, .mainUIView {
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+@keyframes animSlideLeft {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+        transform: translateX(130px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
