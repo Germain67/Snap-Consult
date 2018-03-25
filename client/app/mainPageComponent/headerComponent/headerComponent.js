@@ -1,6 +1,7 @@
 angular.module("homeComponent").component("headerComponent", {
 
     bindings: {
+        nbPatients:"<"
     },
 
     template: require("./headerComponent.html"),
