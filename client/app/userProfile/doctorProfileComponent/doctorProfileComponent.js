@@ -48,8 +48,8 @@ angular.module("homeComponent").component("doctorProfileComponent", {
                 return $q(function (resolve, reject) {
                     patientService.getPatients()
                         .then(function (patients) {
-                            ctrl.nb = patients.length - 1;
-                            var time = (patients.length - 1)*15;
+                            ctrl.nb = patients.length;
+                            var time = (patients.length)*15;
 
                             var min = time%60;
 
